@@ -1,0 +1,52 @@
+<!-- Template for the main Qourant Feed -->
+<template name="qourant">
+  <div class="feed container">
+  		<!-- Header containing Title + date -->
+		{{> header}}
+
+		<!-- Header Widgets -->
+		<section class="row">
+	 		<section class="widget header_widget col-md-4" id="grocery_list">
+	 			{{> grocery_list}}
+	 		</section>	
+	 		<section class="widget header_widget col-md-4" id="birthdays">
+	 			{{> birthdays}}
+	 		</section>	
+	 		<section class="widget header_widget col-md-4" id="whos_in">
+	 			{{> whos_in}}
+	 		</section>	
+	 	</section>
+	
+		<!-- Main widgets -->
+		<section class="row">
+	    	<section class="widget col-md-12" id="Q_of_the_week">
+	    		{{> Q_of_the_week}}
+			</section>
+		</section>
+	
+		<!-- <section class="widget" id="fun_tasks">
+			{{> fun_tasks}}
+		</section>
+
+		<section class="widget" id="skill_search">
+			{{> skill_search}}
+		</section>
+  
+		<section class="widget" id="slide_of_the_day">
+			{{> slide_of_the_day}}
+		</section>
+
+		<section class="widget" id="know_q">
+			{{> know_q}}
+		</section>
+
+		<section class="widget" id="events">
+			{{> events}}
+		</section>
+
+		<section class="widget" id="photo_activity">
+			{{> photo_activity}}
+		</section> -->
+
+  </div>
+</template>
