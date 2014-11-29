@@ -1,6 +1,4 @@
 Meteor.subscribe('photoGalleries');
-Meteor.subscribe('galleryPhotos');
-Meteor.subscribe('galleryComments');
 $('.fancybox').fancybox();
 Template.photoGallerie1.helpers({
 	_id: function() {
@@ -16,10 +14,16 @@ Template.photoGallerie1.helpers({
 		}
 	},
     photos: function(){
-        return galleryPhotos.find({gallery_id: 'E6WzX2BPZERhF6dQ6'}).fetch();
+        var gallery = photoGalleries.findOne({_id: 'E6WzX2BPZERhF6dQ6'});
+        if(gallery) {
+            return gallery.photos;
+        }
     },
     comments: function(){
-        return galleryComments.find({gallery_id: 'E6WzX2BPZERhF6dQ6'}).fetch();
+        var gallery = photoGalleries.findOne({_id: 'E6WzX2BPZERhF6dQ6'});
+        if(gallery) {
+            return gallery.comments;
+        }
     }
 });
 Template.photoGallerie1.events({
@@ -28,10 +32,9 @@ Template.photoGallerie1.events({
 
     var comment = {
       comment: $(e.target).find('[id="comment"]').val(),
-      gallery_id: $(e.target).find('[id="_id"]').val(),
       datetime: new Date()
     };
-    galleryComments.insert(comment);
+    photoGalleries.update({_id: $(e.target).find('[id="_id"]').val()}, {$push: {'comments': comment}});
     $(e.target).find('[id="comment"]').val('');
   }
 });
@@ -49,10 +52,16 @@ Template.photoGallerie2.helpers({
 		}
 	},
     photos: function(){
-        return galleryPhotos.find({gallery_id: 'J3tQjxRi84uZ8TvhY'}).fetch();
+        var gallery = photoGalleries.findOne({_id: 'J3tQjxRi84uZ8TvhY'});
+        if(gallery) {
+            return gallery.photos;
+        }
     },
     comments: function(){
-        return galleryComments.find({gallery_id: 'J3tQjxRi84uZ8TvhY'}).fetch();
+        var gallery = photoGalleries.findOne({_id: 'J3tQjxRi84uZ8TvhY'});
+        if(gallery) {
+            return gallery.comments;
+        }
     }
 });
 Template.photoGallerie2.events({
@@ -61,10 +70,9 @@ Template.photoGallerie2.events({
 
     var comment = {
       comment: $(e.target).find('[id="comment"]').val(),
-      gallery_id: $(e.target).find('[id="_id"]').val(),
       datetime: new Date()
     };
-    galleryComments.insert(comment);
+    photoGalleries.update({_id: $(e.target).find('[id="_id"]').val()}, {$push: {'comments': comment}});
     $(e.target).find('[id="comment"]').val('');
   }
 });
