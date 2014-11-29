@@ -1,0 +1,12 @@
+<template name="slideCam">
+	<section class="birthdays">
+		<header>
+			<h2>Slide pic Amsterdam</h2>
+		</header>
+		<article class="wrapper gallery">
+			{{#each photos}}
+				<a class="grouped_elements photo fancybox" rel="slideCam" href="{{url}}"><img src="{{url}}" alt="" /></a>
+			{{/each}}
+		</article>
+	</section>
+</template>

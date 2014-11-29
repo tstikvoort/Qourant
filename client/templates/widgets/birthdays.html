@@ -1,6 +1,13 @@
 <!-- Template for birthdays List -->
 <template name="birthdays">
-  <div class="wrapper">
-  		BirthDays
-  </div>
+	<section class="birthdays">
+		<header>
+			<h2>Birthdays</h2>
+		</header>
+		<article class="wrapper">
+			{{#each birthdays}}
+				{{> birthday}}
+			{{/each}}
+		</article>
+	</section>
 </template>
