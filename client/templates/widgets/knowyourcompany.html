@@ -1,14 +1,8 @@
-<!-- Template for photogallery List -->
-<template name="photoGallerie1">
-	<section class="photoGallerie">
+<template name="knowyourcompany1">
+	<section class="knowyourcompany">
 		<header>
-			<h2>{{title}}</h2>
+			<h2>{{question}}</h2>
 		</header>
-		<article class="wrapper gallery">
-			{{#each photos}}
-				<a class="grouped_elements photo fancybox" rel="1" href="{{url}}"><img src="{{url}}" alt=""/></a>
-			{{/each}}
-		</article>
 		<form>
 			<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
 			<input type="hidden" id="_id" value="{{_id}}" />
@@ -21,16 +15,11 @@
 		</section>
 	</section>
 </template>
-<template name="photoGallerie2">
-	<section class="photoGallerie">
+<template name="knowyourcompany2">
+	<section class="knowyourcompany">
 		<header>
-			<h2>{{title}}</h2>
+			<h2>{{question}}</h2>
 		</header>
-		<article class="wrapper gallery">
-			{{#each photos}}
-				<a class="grouped_elements photo fancybox" rel="2" href="{{url}}"><img src="{{url}}" alt=""/></a>
-			{{/each}}
-		</article>
 		<form>
 			<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
 			<input type="hidden" id="_id" value="{{_id}}" />

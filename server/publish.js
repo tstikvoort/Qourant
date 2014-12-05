@@ -1,12 +1,18 @@
 Meteor.publish('slidepics', function(){
-  return slidepics.find();
+  	return slidepics.find();
 });
 Meteor.publish('photoGalleries', function(){
-  return photoGalleries.find();
+  	return photoGalleries.find();
 });
-Meteor.publish('galleryPhotos', function(){
-  return galleryPhotos.find();
+Meteor.publish('knowYourCompany', function(){
+  	return knowYourCompany.find();
 });
-Meteor.publish('galleryComments', function(){
-  return galleryComments.find();
+Meteor.publish("tasks020", function() {
+   	return Tasks020.find();
+});
+Meteor.publish("tasks070", function() {
+   	return Tasks070.find();
+});
+Meteor.publish("tasksSF", function() {
+   	return TasksSF.find();
 });
