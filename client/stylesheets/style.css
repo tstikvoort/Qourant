@@ -115,6 +115,9 @@ body {
 	max-height: 400px;
 	overflow:hidden;
 }
+#Q_of_the_week #main-Qer video {
+	width: 100%;
+}
 
 #video_comment_now {
 	background-color:#ffe64d;
@@ -382,7 +385,6 @@ section.comments {
 
 
 }
-
 @font-face {
     font-family: 'canterburyregular';
     src: url('fonts/canterbury.eot');
