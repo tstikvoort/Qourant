@@ -104,6 +104,9 @@ body {
 	max-height: 400px;
 	overflow:hidden;
 }
+#Q_of_the_week #main-Qer video {
+	width: 100%;
+}
 
 /* Columns */
 #column_wrapper {
@@ -311,7 +314,6 @@ input::-webkit-input-placeholder{
 		width: 100%;
 	}
 }
-
 @font-face {
     font-family: 'canterburyregular';
     src: url('fonts/canterbury.eot');
