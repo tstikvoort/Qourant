@@ -4,13 +4,13 @@ Meteor.subscribe('tasksSF');
 // This code only runs on the client
 Template.grocery_list.helpers({
   tasks020: function () {
-    return Tasks020.find({}, {sort: {createdAt: -1}, limit: 3});
+    return Tasks020.find({}, {sort: {createdAt: -1}, limit: 2});
   },
   tasks070: function () {
-    return Tasks070.find({}, {sort: {createdAt: -1}, limit: 3});
+    return Tasks070.find({}, {sort: {createdAt: -1}, limit: 2});
   },
   tasksSF: function () {
-    return TasksSF.find({}, {sort: {createdAt: -1}, limit: 3});
+    return TasksSF.find({}, {sort: {createdAt: -1}, limit: 2});
   }
 });
 

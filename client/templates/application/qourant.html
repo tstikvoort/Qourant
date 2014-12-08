@@ -5,7 +5,7 @@
 		{{> header}}
 
 		<!-- Header Widgets -->
-		<section class="row">
+		<section id="header_widgets" class="row">
 	 		<section class="widget header_widget col-md-4" id="grocery_list">
 	 			{{> grocery_list}}
 	 		</section>	
@@ -16,34 +16,51 @@
 	 			{{> whos_in}}
 	 		</section>	
 	 	</section>
-		
+
+	 	<!-- Q-of-the-week -->
+	   <section class="widget" id="Q_of_the_week">
+	    	{{> Q_of_the_week}}
+		</section>
+
 		<!-- Main widgets -->
-		<section class="row">
-			<section class="widget col-xs-12 col-md-6" id="Q_of_the_week">
-				{{> photoGallerie1}}
+		<section id="column_wrapper">
+			<!-- Left Column -->
+			<section id="left_column">
+				<section class="widget">
+					{{> knowyourcompany1}}
+				</section>
+					    	<section class="widget" id="Q_of_the_week">
+		    		{{> slideCam}}
+				</section>
+				<section class="widget">
+					{{> photoGallerie2}}
+				</section>
 			</section>
-			<section class="widget col-xs-12 col-md-6" id="Q_of_the_week">
-				{{> photoGallerie2}}
-			</section>
-		</section>
-		<section class="row">
-			<section class="widget col-xs-12 col-md-6" id="Q_of_the_week">
-				{{> knowyourcompany1}}
-			</section>
-			<section class="widget col-xs-12 col-md-6" id="Q_of_the_week">
-				{{> knowyourcompany2}}
-			</section>
-		</section>
-		<section class="row">
-	    	<section class="widget col-xs-12" id="Q_of_the_week">
-	    		{{> Q_of_the_week}}
-			</section>
-		</section>
-		<section class="row">
-	    	<section class="widget col-xs-12" id="Q_of_the_week">
-	    		{{> slideCam}}
+			<!-- Right Column -->
+			<section id="right_column">
+				<section class="widget">
+					{{> photoGallerie1}}
+				</section>
+				<section class="widget">
+					{{> knowyourcompany2}}
+				</section>
 			</section>
 		</section>
+
+
+
+<!-- 		<section class="row">
+		
+
+		</section>
+		<section class="row">
+
+
+		</section>
+
+		<section class="row">
+
+		</section> -->
 		<!-- <section class="widget" id="fun_tasks">
 			{{> fun_tasks}}
 		</section>

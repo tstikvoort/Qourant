@@ -1,82 +1,10 @@
 <!-- Template for Groceries List -->
 <template name="grocery_list">
-	<style>
-
-
-.groceries .left {
-	width: 20%;
-	float: left;
-}
-.groceries .right {
-	width: 77%;
-	float: right;
-}
-/* left */
-.groceries nav ul {
-	padding: 0;
-	margin: 0;
-}
-.groceries nav ul li  {
-	width: 20%;
-	padding: 10px;
-	list-style: none;
-	width: 100%;
-	text-align: center;
-}
-.groceries nav ul li.act, .groceries nav ul li:hover {
-	background: black;
-	color: white;
-}
-/* groceryForm */
-.groceries form input {
-	width: 100%;
-	margin-top: 3%;
-}
-
-.new-task input:focus{
-  outline: 0;
-}
-
-
-/* grocerieLoop */
-.groceries ul {
-  margin: 0;
-  padding: 0;
-}
-.groceries .groceriesList li {
-  	list-style: none;
-  	border-bottom: #eee solid 1px;
-  	padding: 5px 0;
-}
-.groceries .delete {
-  float: right;
-  font-weight: bold;
-  background: none;
-  font-size: 1em;
-  border: none;
-  position: relative;
-}
-.groceries li .text {
-  margin-left: 10px;
-}
-
-.groceries li.checked {
-  color: #888;
-}
-
-.groceries li.checked .text {
-  text-decoration: line-through;
-}
-
-.groceries .wrap070,.wrapSF {
-	display: none;
-}
-	</style>
   <div class="wrapper groceries">
   		<!-- 020 -->
 	  	<div class="groceryListWrapper 020 wrap020">
 		  	<header>
-		      	<h2>Groceries</h2>
+		      	<h2>Grocery List</h2>
 		  	</header>
 		  	<nav class="left">
 				<ul>
@@ -86,20 +14,20 @@
 				</ul>
 			</nav>
 		  	<section class="right">
-		  		<form class="new-task020">
-		  	    	<input type="text" name="text" placeholder="Type to add a new grocery" />
-		  	  	</form>
 			   	<ul class="groceriesList">
 			    	{{#each tasks020}}
 			    		{{> grocery_list_task}}
 			      	{{/each}}
 			   	</ul>
+			   	<form class="new-task020">
+		  	    		<input type="text" name="text" placeholder="Type to add" />
+		  	  		</form>
 			</section>
 	  	</div>
 		<!-- 070 -->
 		<div class="groceryListWrapper wrap070">
 		  	<header>
-		      	<h2>Groceries</h2>
+		      	<h2>Grocery List</h2>
 		  	</header>
 		  	<nav class="left">
 				<ul>
@@ -109,20 +37,20 @@
 				</ul>
 			</nav>
 		  	<section class="right">
-		  		<form class="new-task070">
-		  	    	<input type="text" name="text" placeholder="Type to add a new grocery" />
-		  	  	</form>
 			   	<ul class="groceriesList">
 			    	{{#each tasks070}}
 				    	{{> grocery_list_task}}
 				    {{/each}}
 			   	</ul>
+		  		<form class="new-task070">
+		  	    	<input type="text" name="text" placeholder="Type to add" />
+		  	  	</form>
 			</section>
 	  	</div>
 	  <!-- USA groceries -->
 	  <div class="groceryListWrapper wrapSF">
 		  	<header>
-		      	<h2>Groceries</h2>
+		      	<h2>Grocery List</h2>
 		  	</header>
 		  	<nav class="left">
 				<ul>
@@ -132,14 +60,14 @@
 				</ul>
 			</nav>
 		  	<section class="right">
-		  		<form class="new-taskSF">
-		  	    	<input type="text" name="text" placeholder="Type to add a new grocery" />
-		  	  	</form>
 			   	<ul class="groceriesList">
 			    	{{#each tasksSF}}
 				    	{{> grocery_list_task}}
 				    {{/each}}
 			   	</ul>
+		  		<form class="new-taskSF">
+		  	    	<input type="text" name="text" placeholder="Type to add" />
+		  	  	</form>
 			</section>
 	  	</div>
   </div>

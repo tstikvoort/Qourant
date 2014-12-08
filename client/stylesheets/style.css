@@ -1,15 +1,26 @@
+/*  Yellow #FFDD00  */
+/*  Green #94c11f  */
 /* Main stuff */
 * {
-	font-family: 'roboto';
+	font-family: arial;
+	color: #1C1C1B;
 }
 
 h2 {
 	background: black;
 	color: white;
 	text-transform: uppercase;
-	padding: 0.2em;
+	padding: 0.1em;
 	margin: 0;
 	font-family: 'revolutionrevolution'
+}
+
+input:focus,textarea:focus,select:focus{
+  border:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  box-shadow:none;
+  outline: none;
 }
 
 /*#################################*/
@@ -20,30 +31,251 @@ header h1 {
     font-family: 'canterburyregular';
 	font-size: 146px;
 	text-align: center;
-	color: black;
+	color: white;
 	margin: 0;
 }
 
 header span {
 	display: block;
 	text-align: right;
+	color: white;
 }
+
+body {
+	background-color: black;
+}
+
+#left_column {
+	float: left;
+	width: 49%;
+}
+
+#right_column {
+	float: right;
+	width: 49%;
+}
+
+.row {
+	margin:0;
+}
+
+/*#################################*/
+/*    			Widgets  	  		  */
+/*#################################*/
+
 /* Header widgets */
-.header_widget {
-	min-height: 15em;
+#header_widgets {
+	background-color: white;
+	padding: 20px 15px 15px 15px;
+	font-weight: bold;
+	margin-bottom: 15px;
 }
+.header_widget {
+	/*min-height: 15em;*/
+	padding: 0 5px;
+}
+
+#header_widgets h2 {
+	font-size: 26px;
+}
+
+#header_widgets input {
+	 background: none;
+}
+
+#header_widgets input::-webkit-input-placeholder{
+	color:#1C1C1B;
+	font-size: 16px;
+	font-style: italic;
+	text-decoration:underline;
+} 
+
+#birthdays {
+	font-size: 16px;
+}
+/* Q 0f the Week */
+#Q_of_the_week {
+/*	margin-bottom: 20px;*/
+	padding: 20px;
+	background-color:white;
+}
+
+#Q_of_the_week #main-Qer {
+	max-height: 400px;
+	overflow:hidden;
+}
+
+/* Columns */
+#column_wrapper {
+	overflow: hidden;
+}
+
+/* General */
+#column_wrapper .widget {
+	margin-top: 20px;
+	background-color: white;
+	padding: 0 20px 20px 20px;
+}
+
+/* Font */
+#column_wrapper h2 {
+	font-size: 21px;
+	display: inline;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#column_wrapper p {
+	font-size: 20px;
+}
+
+/* Inputs */
+input[type="submit"] {
+	display: none;
+}
+
+input{
+	background:  rgb(255,221,0);
+	border: none;
+	padding: 10px;
+	width: 100%;
+}
+
+input::-webkit-input-placeholder{
+	color:#1C1C1B;
+	font-size: 18px;
+}
+
+
+.knowyourcompany p {
+	margin: 10px 0;
+	font-size: 22px;
+}
+
+.comments ul {
+	padding: 0;
+	margin: 0;
+}
+
+.comments li {
+	list-style: none;
+	margin: 5px 0px;
+	margin-bottom: 15px;
+}
+* .comments p {
+	font-size: 21px;
+	display: inline;
+}
+
+.comments .initials {
+	font-size: 21px;
+	color: white;
+	background-color:#94c11f;
+	font-weight: bold;
+	display: inline;
+	padding: 8px 4px;
+	margin-right: 10px;
+}
+
+/*#################################*/
+/* Groceries List */
+.groceries .left {
+	width: 20%;
+	float: left;
+}
+
+.groceries .right {
+	width: 77%;
+	float: right;
+}
+
+.groceries nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+.groceries nav ul li  {
+	width: 20%;
+	padding: 8px 10px;
+	list-style: none;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+}
+
+.groceries nav ul li:hover {
+	cursor: pointer;
+}
+
+.groceries nav ul li.act, .groceries nav ul li:hover {
+	background: black;
+	color: white;
+}
+/* groceryForm */
+.groceries form input {
+	width: 100%;
+	margin-top: 3%;
+}
+
+.groceries ul li input {
+	width: auto;
+}
+
+/* grocerieLoop */
+.groceries ul {
+  margin: 0;
+  padding: 0;
+}
+
+.groceries .groceriesList li {
+  	list-style: none;
+  	padding: 5px 0;
+  	font-size: 16px;
+}
+
+.groceries .delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 1em;
+  border: none;
+  position: relative;
+}
+
+.groceries li .text {
+  margin-left: 10px;
+}
+
+.groceries li.checked {
+  color: #888;
+}
+
+.groceries li.checked .text {
+  text-decoration: line-through;
+}
+
+.groceries .wrap070,.wrapSF {
+	display: none;
+}
+
+/*#################################*/
+/* birthdays */
+.birthdays .person {
+	padding: 8px 0;
+}
+
 /* lightbox gallery */
 .gallery img {
 	display: none;
 	max-width: 100%;
 }
+
 .gallery .photo:first-child img {
 	display: inline-block;
 }
-/* birthdays */
-.birthdays .person {
-	margin: 5px 0;
-}
+
+
+
 
 /* photogallery */ 
 
@@ -56,7 +288,8 @@ header span {
 }
 
 .comment_now {
-	background-color: rgb(253,216,18);
+	background-color: rgb(253,221,14);
+	background-color: #ffdd0e;
 	color: black;
 	font-size: 22px;
 	padding: 0.4em 0.8em;
@@ -66,7 +299,18 @@ header span {
 	max-width: 75%;
 }
 
+@media (max-width: 900px) {
+	#left_column {
+		width: 100%;
+	}	
+	#right_column {
+		width: 100%;
+	}
 
+	#container {
+		width: 100%;
+	}
+}
 
 @font-face {
     font-family: 'canterburyregular';
