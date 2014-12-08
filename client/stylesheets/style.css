@@ -1,9 +1,38 @@
 /*  Yellow #FFDD00  */
-/*  Green #94c11f  */
-/* Main stuff */
+/*  Green #ffe64d  */
+
+
+/*#################################*/
+/*    			Feed Main   		  */
+/*#################################*/
 * {
 	font-family: arial;
 	color: #1C1C1B;
+}
+
+.feed.container {
+	max-width: 75%;
+	overflow: hidden;
+}
+
+/* Header */
+header h1 {
+    font-family: 'canterburyregular';
+	font-size: 156px;
+	text-align: center;
+	color: white;
+	margin: 0;
+}
+
+header span {
+	display: block;
+	text-align: right;
+	color: white;
+	font-size: 22px;
+	position: relative;
+	padding-right: 60px;
+	top: -30px;
+
 }
 
 h2 {
@@ -21,24 +50,6 @@ input:focus,textarea:focus,select:focus{
   -moz-box-shadow:none;
   box-shadow:none;
   outline: none;
-}
-
-/*#################################*/
-/*    			Feed Main   		  */
-/*#################################*/
-/* Header */
-header h1 {
-    font-family: 'canterburyregular';
-	font-size: 146px;
-	text-align: center;
-	color: white;
-	margin: 0;
-}
-
-header span {
-	display: block;
-	text-align: right;
-	color: white;
 }
 
 body {
@@ -68,7 +79,7 @@ body {
 	background-color: white;
 	padding: 20px 15px 15px 15px;
 	font-weight: bold;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 .header_widget {
 	/*min-height: 15em;*/
@@ -105,6 +116,11 @@ body {
 	overflow:hidden;
 }
 
+#video_comment_now {
+	background-color:#ffe64d;
+	font-size: 22px;
+}
+
 /* Columns */
 #column_wrapper {
 	overflow: hidden;
@@ -125,17 +141,13 @@ body {
 	padding-right: 5px;
 }
 
-#column_wrapper p {
-	font-size: 20px;
-}
-
 /* Inputs */
 input[type="submit"] {
 	display: none;
 }
 
 input{
-	background:  rgb(255,221,0);
+	background:  #ffe64d;
 	border: none;
 	padding: 10px;
 	width: 100%;
@@ -146,34 +158,43 @@ input::-webkit-input-placeholder{
 	font-size: 18px;
 }
 
-
-.knowyourcompany p {
+/* Know Your Company*/
+.knowyourcompany p.question {
 	margin: 10px 0;
 	font-size: 22px;
 }
 
+/* Comments */
 .comments ul {
 	padding: 0;
 	margin: 0;
 }
 
+section.comments {
+	overflow:hidden;
+	margin-top: 15px;
+/*	margin-bottom: 25px;*/
+
+}
 .comments li {
+	overflow: hidden;
 	list-style: none;
 	margin: 5px 0px;
 	margin-bottom: 15px;
+	border-top: 4px solid #9cca24;
 }
-* .comments p {
-	font-size: 21px;
+.comments p {
+	font-size: 18px;
 	display: inline;
 }
 
 .comments .initials {
 	font-size: 21px;
 	color: white;
-	background-color:#94c11f;
+	background-color:#9cca24;
 	font-weight: bold;
-	display: inline;
-	padding: 8px 4px;
+	float: left;
+	padding: 6px 4px;
 	margin-right: 10px;
 }
 
@@ -201,6 +222,8 @@ input::-webkit-input-placeholder{
 	width: 100%;
 	text-align: center;
 	font-size: 16px;
+	color: white;
+	background-color:black;
 }
 
 .groceries nav ul li:hover {
@@ -208,8 +231,8 @@ input::-webkit-input-placeholder{
 }
 
 .groceries nav ul li.act, .groceries nav ul li:hover {
-	background: black;
-	color: white;
+	background: white;
+	color: black;
 }
 /* groceryForm */
 .groceries form input {
@@ -295,21 +318,69 @@ input::-webkit-input-placeholder{
 	padding: 0.4em 0.8em;
 }
 
-.feed.container {
-	max-width: 75%;
+@media (max-width: 720px) {
+	/* General Stuff*/
+	.feed.container {
+		padding-left:0;
+		padding-right:0;
+	}
+	/* Header Widgets */
+	#header_widgets {
+		display: none;
+	}
+	/* Q'er of the week*/
+	#Q_of_the_week {
+		padding:0;
+	}
+	#video_comment_now {
+		text-align: center;
+	}
+
+
 }
 
+
 @media (max-width: 900px) {
+	/* General Stuff*/
+	.feed.container {
+		max-width: 100%;
+	}
 	#left_column {
 		width: 100%;
 	}	
 	#right_column {
 		width: 100%;
 	}
-
 	#container {
 		width: 100%;
 	}
+
+
+
+}
+
+@media (max-width: 1080px) {
+	/* General Stuff*/
+	.feed.container {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	/* Header */
+	header h1 {
+		font-size: 70px;
+	}
+
+	header span {
+		display: block;
+		text-align: center;
+		padding: 0;
+		font-size: 22px;
+		position: static;
+
+	}
+
+
 }
 
 @font-face {
