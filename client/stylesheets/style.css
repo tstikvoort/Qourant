@@ -24,7 +24,7 @@ header h1 {
 	margin: 0;
 }
 
-header span {
+header .editionDate {
 	display: block;
 	text-align: right;
 	color: white;
@@ -33,6 +33,13 @@ header span {
 	padding-right: 60px;
 	top: -30px;
 
+}
+header .user{
+	color: white;
+}
+header .user li {
+	margin-left: 5px;
+	display: inline-block;
 }
 
 h2 {
@@ -69,6 +76,28 @@ body {
 .row {
 	margin:0;
 }
+
+/*#################################*/
+/*    			Login  	  		      */
+/*#################################*/
+header + .navbar-form {
+	margin: 0 auto;
+	margin-top: 15%;
+	width: 300px;
+
+}
+.navbar-form .btn-Google {
+	font-family: arial;
+	font-size: 22px;
+	color: black;
+	background: white;
+}
+
+
+
+
+
+
 
 /*#################################*/
 /*    			Widgets  	  		  */

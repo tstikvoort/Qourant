@@ -3,8 +3,12 @@
 	<header>
 		<div class="wrapper">
 			<h1>The Qourant</h1>
-			<span>Edition date: {{todaysDate}}</span>
+			<span class="editionDate">Edition date: {{editionDate}}</span>
 		</div>
-	<!-- 	{{> loginButtons}} -->
+		{{#if currentUser}}
+			<div class="user">
+				{{name}} {{> loginButtons}}
+			</div>
+		{{/if}}
 	</header>
 </template>

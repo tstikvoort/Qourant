@@ -1,5 +1,9 @@
+Meteor.subscribe("users");
 Template.header.helpers({
-	todaysDate: function() {
+	name: function(){
+		return Meteor.user().services.google.name;
+	},
+	editionDate: function() {
 		d = new Date(new Date());
 		var day = d.getDay(),
 			diff = d.getDate() - day + (day == 0 ? -6:1);

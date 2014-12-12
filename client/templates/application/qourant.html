@@ -3,7 +3,7 @@
   <div class="feed container">
   		<!-- Header containing Title + date -->
 		{{> header}}
-
+		{{#if currentUser}}
 		<!-- Header Widgets -->
 		<section id="header_widgets" class="row">
 	 		<section class="widget header_widget col-md-4" id="grocery_list">
@@ -84,6 +84,9 @@
 		<section class="widget" id="photo_activity">
 			{{> photo_activity}}
 		</section> -->
+		{{else}}
+			{{> loginButtons}}
+		{{/if}}
 
   </div>
 </template>
