@@ -100,12 +100,28 @@ header + .navbar-form {
 	margin-top: 15px;
 	background: red !important;
 	color: white;
+	border: none;
+	display: block;
+	text-align: center;
+	padding:5px 10px;
 }
 
+/*#################################*/
+/*    			notFound  	  		  */
+/*#################################*/
+.notFound, .getOut {
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
 
-
-
-
+.notFound img, .getOut img {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	top: 0;
+}
 
 /*#################################*/
 /*    			Widgets  	  		  */
