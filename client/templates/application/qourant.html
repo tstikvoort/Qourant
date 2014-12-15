@@ -1,17 +1,17 @@
 <!-- Template for the main Qourant Feed -->
 <template name="qourant">
-  <div class="feed container">
+  <div class="">
   		<!-- Header containing Title + date -->
 		{{#if currentUser}}
 		<!-- Header Widgets -->
 		<section id="header_widgets" class="row">
-	 		<section class="widget header_widget col-md-4" id="grocery_list">
+	 		<section class="widget header_widget" id="grocery_list">
 	 			{{> grocery_list}}
 	 		</section>	
-	 		<section class="widget header_widget col-md-4" id="birthdays">
+	 		<section class="widget header_widget" id="birthdays">
 	 			{{> birthdays}}
 	 		</section>	
-	 		<section class="widget header_widget col-md-4" id="whos_in">
+	 		<section class="widget header_widget" id="whos_in">
 	 			{{> whos_in}}
 	 		</section>	
 	 	</section>

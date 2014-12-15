@@ -19,6 +19,9 @@ Meteor.publish("tasksSF", function() {
 Meteor.publish("searchResults", function() {
    	return searchResults.find();
 });
+Meteor.publish("whosIn", function() {
+    return whosIn.find();
+});
 Meteor.publish("userData", function () {
     return Meteor.users.find();
 });

@@ -15,6 +15,12 @@
 	overflow: hidden;
 }
 
+#main {
+	
+/*		max-width: 75%;
+	overflow: hidden;*/
+}
+
 /* Header */
 header h1 {
     font-family: 'canterburyregular';
@@ -145,6 +151,8 @@ header + .navbar-form {
 .header_widget {
 	/*min-height: 15em;*/
 	padding: 0 5px;
+	width: 33.33%;
+	float: left;
 }
 
 #header_widgets h2 {
@@ -362,6 +370,62 @@ section.comments {
 	padding: 8px 0;
 }
 
+/*#################################*/
+/* Whos_in */
+#whos_in .left {
+	width: 20%;
+	float: left;
+}
+
+#whos_in  .right {
+	width: 80%;
+	float: right;
+}
+#whos_in nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+#whos_in nav ul li  {
+	width: 20%;
+	padding: 8px 10px;
+	list-style: none;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	color: black;
+	background-color:white;
+
+}
+
+#whos_in nav ul li:hover {
+	cursor: pointer;
+}
+
+#whos_in nav ul li.act, .groceries nav ul li:hover {
+	background: black;
+	color: white;
+}
+
+#whos_in #whos_in_070 {
+	display: none;
+}
+
+#whos_in_QSA {
+	display: none;
+}
+#whos_in .wrap span {
+	color: white;
+	background-color: #9cca24;
+	padding: 0.2em 0.2em;
+	margin: 0;
+	font-size: 16px;
+	display: block;
+	float: left;
+	width: 15%;
+	text-align: center;
+}
+
 /* lightbox gallery */
 .gallery img {
 	display: none;
@@ -470,6 +534,13 @@ section.comments {
 		width: 100%;
 	}
 
+	.header_widget {
+
+	padding: 0 5px;
+	width: 100%;
+	float: left;
+}
+
 
 
 }
@@ -493,6 +564,10 @@ section.comments {
 		font-size: 22px;
 		position: static;
 
+
+	}
+	header .editionDate {
+		top: 0;
 	}
 
 }

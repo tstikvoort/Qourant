@@ -1,11 +1,36 @@
 <!-- Template for whos_in List -->
 <template name="whos_in">
-  <section class="Who's in">
+  <section class="whos_in">
   		<header>
 			<h2>Who's in?</h2>
 		</header>
-  		<article class="wrapper">
-			<!-- {{> GroceryList}} -->
-		</article>
+		<nav class="left">
+			<ul>
+			   <li id="flip_in_020" class="act">020</li>
+				<li id="flip_in_070">070</li>
+				<li id="flip_in_QSA">QSA</li>
+			</ul>
+		</nav>
+		<section id="whos_in_020" class="wrap right">
+			{{#each whosIn_020 }}
+			   <span>	
+			   	{{initial}}
+				</span>
+			{{/each}}
+		</section>
+		<section id="whos_in_070" class="wrap right">
+			{{#each whosIn_070}}
+				<span>			
+			   	{{ initial }}
+				</span>
+			{{/each}}
+		</section>
+<!-- 		<section id="whos_in_QSA">
+			{{#each in_QSA}}
+				<span>
+			   	{{ this }}
+			   <span>
+			{{/each}}
+		</section> -->
   </section>
 </template>
