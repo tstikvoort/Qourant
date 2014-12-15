@@ -6,10 +6,11 @@
 meteor-platform
 mizzao:bootstrap-3
 underscore
-ian:accounts-ui-bootstrap-3
-accounts-password
 iron:router
 http
 mrt:fancybox
 accounts-google
+ian:accounts-ui-bootstrap-3
+service-configuration
+sacha:spin
 

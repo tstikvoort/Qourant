@@ -19,3 +19,10 @@ Meteor.publish("tasksSF", function() {
 Meteor.publish("searchResults", function() {
    	return searchResults.find();
 });
+Meteor.publish("userData", function () {
+    return Meteor.users.find();
+});
+Meteor.publish("users", function () {
+  return Meteor.users.find({_id: this.userId},
+    {fields: {'services': 1}});
+});
