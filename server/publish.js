@@ -16,6 +16,9 @@ Meteor.publish("tasks070", function() {
 Meteor.publish("tasksSF", function() {
    	return TasksSF.find();
 });
+Meteor.publish("userData", function () {
+    return Meteor.users.find();
+});
 Meteor.publish("users", function () {
   return Meteor.users.find({_id: this.userId},
     {fields: {'services': 1}});
