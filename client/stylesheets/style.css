@@ -1,5 +1,5 @@
-/*  Yellow #FFDD00  */
-/*  Green #ffe64d  */
+/*  Yellow #ffe64d  */
+/*  Green #9cca24  */
 
 
 /*#################################*/
@@ -42,6 +42,14 @@ h2 {
 	padding: 0.1em;
 	margin: 0;
 	font-family: 'revolutionrevolution'
+}
+
+h3 {
+	font-family: 'revolutionrevolution'
+}
+
+a:hover {
+	text-decoration: none;
 }
 
 input:focus,textarea:focus,select:focus{
@@ -144,6 +152,10 @@ body {
 	padding-right: 5px;
 }
 
+#column_wrapper .widget p {
+	font-size: 22px;
+}
+
 /* Inputs */
 input[type="submit"] {
 	display: none;
@@ -167,6 +179,13 @@ input::-webkit-input-placeholder{
 	font-size: 22px;
 }
 
+/* Fun TAsks */
+#fun_task button {
+	background-color: #ffe64d;
+	border: none;
+	font-size: 18px;
+	padding: 10px;
+}
 /* Comments */
 .comments ul {
 	padding: 0;
@@ -186,7 +205,7 @@ section.comments {
 	margin-bottom: 15px;
 	border-top: 4px solid #9cca24;
 }
-.comments p {
+#column_wrapper .comments li p {
 	font-size: 18px;
 	display: inline;
 }
@@ -225,8 +244,8 @@ section.comments {
 	width: 100%;
 	text-align: center;
 	font-size: 16px;
-	color: white;
-	background-color:black;
+	color: black;
+	background-color:white;
 }
 
 .groceries nav ul li:hover {
@@ -234,8 +253,8 @@ section.comments {
 }
 
 .groceries nav ul li.act, .groceries nav ul li:hover {
-	background: white;
-	color: black;
+	background: black;
+	color: white;
 }
 /* groceryForm */
 .groceries form input {
@@ -300,6 +319,46 @@ section.comments {
 	display: inline-block;
 }
 
+/*#################################*/
+/*     FULL SCREEN	Widgets  	  */
+/*#################################*/
+
+/* Full screen Search */
+.fullWidget {
+	background-color: white;
+	padding: 0 20px 20px 20px;
+	overflow: hidden;
+}
+
+.search_results_wrapper h3 {
+	background-color: #9cca24;
+	color: white;
+	padding: 0.1em;
+}
+
+.search_results_wrapper article {
+	font-family: arial;
+	font-size: 22px;
+}
+
+.search_results_wrapper ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.search_results_wrapper li {
+	display: inline;
+	border-radius: 5px;
+	background-color: #ffe64d;
+	padding: 5px;
+}
+
+.search_results_wrapper .result {
+	margin-bottom: 40px;
+}
+
+/* Groceries */
 
 
 
@@ -382,7 +441,6 @@ section.comments {
 		position: static;
 
 	}
-
 
 }
 @font-face {

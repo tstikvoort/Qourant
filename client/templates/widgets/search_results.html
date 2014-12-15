@@ -1,0 +1,19 @@
+<template name="searchResults">
+	<section class="search_results_wrapper widget fullWidget" >
+		<header>
+			<h2>Search Results:</h2>
+		</header>
+		<article>
+			{{#each searchResults}}
+				<section class="result">
+			    	<h3>{{ name }}, {{ lastname }}</h3>	
+					<ul>
+						{{#each skills}}
+						<li>{{ this }}</li>
+						{{/each}}
+					</ul>
+			   </section>
+			{{/each}}
+		</article>
+	</section>
+</template>

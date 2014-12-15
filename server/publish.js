@@ -16,3 +16,6 @@ Meteor.publish("tasks070", function() {
 Meteor.publish("tasksSF", function() {
    	return TasksSF.find();
 });
+Meteor.publish("searchResults", function() {
+   	return searchResults.find();
+});
