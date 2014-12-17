@@ -1,0 +1,12 @@
+<template name="initials">
+	{{#with user}}
+		<section class="user">
+			<div class="initials">{{initials}}
+				<div class="userInfo">
+					<img src="{{imageUrl}}" alt="{{name}}"/>
+					<p>{{name}}</p>
+				</div>
+			</div>
+		</section>
+	{{/with}}
+</template>

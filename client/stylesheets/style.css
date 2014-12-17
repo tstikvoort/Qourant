@@ -202,10 +202,6 @@ header + .navbar-form {
 	padding: 0 20px 20px 20px;
 }
 
-.widget .comments {
-	overflow: hidden;
-}
-
 .widget .nrComments {
 	width: 15%;
 	float: left;
@@ -315,33 +311,25 @@ header + .navbar-form {
 }
 
 section.comments {
-	overflow:hidden;
 	margin-top: 15px;
 /*	margin-bottom: 25px;*/
 
 }
 .comments li {
-	overflow: hidden;
 	list-style: none;
 	margin: 5px 0px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	border-top: 4px solid #9cca24;
+	min-height: 40px;
 }
 #column_wrapper .comments li p {
 	font-size: 18px;
+	vertical-align: top;
 	display: inline;
 }
-
-.comments .initials {
-	font-size: 21px;
-	color: white;
-	background-color:#9cca24;
-	font-weight: bold;
-	float: left;
-	padding: 6px 4px;
-	margin-right: 10px;
+.commentForm {
+	overflow: hidden;
 }
-
 /*#################################*/
 /* Groceries List */
 .groceries .left {
@@ -656,6 +644,44 @@ section.comments {
 		top: 0;
 	}
 
+}
+
+/*#################################*/
+/*    			user  		  	   */
+/*#################################*/
+.user {
+	position: relative;
+}
+.user .initials {
+	font-size: 21px;
+	color: white;
+	background-color:#9cca24;
+	font-weight: bold;
+	float: left;
+	padding: 6px 4px;
+	margin-right: 10px;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+}
+.user .userInfo {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	background: #9cca24;
+	z-index: 1;
+	padding: 20px;
+}
+.user .userInfo img {
+	width: 40px;
+	margin-right: 20px;
+}
+.user .userInfo p {
+	line-height: 40px;
+}
+.user .initials:hover .userInfo {
+	display: block;
 }
 @font-face {
     font-family: 'canterburyregular';
