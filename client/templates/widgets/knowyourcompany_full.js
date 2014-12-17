@@ -1,5 +1,5 @@
 Meteor.subscribe('knowYourCompany');
-Template.knowyourcompany1.helpers({
+Template.knowyourcompanyFull1.helpers({
 
 	_id: function() {
 		var question = knowYourCompany.find().fetch()[0];
@@ -16,7 +16,7 @@ Template.knowyourcompany1.helpers({
   comments: function(){
     var question = knowYourCompany.find().fetch()[0];
     if(question) {
-      return question.comments.reverse().splice(0,3);
+      return question.comments.reverse();
     }
   },
   nrComments1: function() {
@@ -24,7 +24,7 @@ Template.knowyourcompany1.helpers({
     return question.comments.length;
   }
 });
-Template.knowyourcompany1.events({
+Template.knowyourcompanyFull1.events({
   'submit form': function(e) {
     e.preventDefault();
     var user = Meteor.user();
@@ -38,7 +38,7 @@ Template.knowyourcompany1.events({
     $(e.target).find('[id="comment"]').val('');
   }
 });
-Template.knowyourcompany2.helpers({
+Template.knowyourcompanyFull2.helpers({
 	_id: function() {
 		var question = knowYourCompany.find().fetch()[1];
 		if(question) {
@@ -54,7 +54,7 @@ Template.knowyourcompany2.helpers({
   comments: function(){
       var question = knowYourCompany.find().fetch()[1];
       if(question) {
-          return question.comments.reverse().splice(0,3);
+          return question.comments;
       }
   },
   nrComments2: function() {
@@ -62,7 +62,7 @@ Template.knowyourcompany2.helpers({
     return question.comments.length;
   }
 });
-Template.knowyourcompany2.events({
+Template.knowyourcompanyFull2.events({
   'submit form': function(e) {
     e.preventDefault();
     var user = Meteor.user();

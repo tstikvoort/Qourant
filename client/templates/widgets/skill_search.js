@@ -41,7 +41,7 @@ Template.skill_search.events({
 					'name': 'Laurens',
 					'lastname': 'van den Oever',
 					'job': ['Projectleider', 'Software Engineer'],
-					'skills': ['Javascript', 'HTML5', 'css3', 'meteor', 'ASP.NET', 'C++', 'Python', 'Haskell']
+					'skills': ['Javascript', 'html5', 'css3', 'meteor', 'ASP.NET', 'C++', 'Python', 'Haskell']
 				}
 		];
 

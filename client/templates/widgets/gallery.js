@@ -13,18 +13,22 @@ Template.photoGallerie1.helpers({
 			return gallery.title;
 		}
 	},
-    photos: function(){
-        var gallery = photoGalleries.findOne({_id: 'E6WzX2BPZERhF6dQ6'});
-        if(gallery) {
-            return gallery.photos;
-        }
-    },
-    comments: function(){
-        var gallery = photoGalleries.findOne({_id: 'E6WzX2BPZERhF6dQ6'});
-        if(gallery) {
-            return gallery.comments.reverse().splice(0,3);
-        }
+  photos: function(){
+    var gallery = photoGalleries.findOne({_id: 'E6WzX2BPZERhF6dQ6'});
+    if(gallery) {
+      return gallery.photos;
     }
+  },
+  comments: function(){
+    var gallery = photoGalleries.findOne({_id: 'E6WzX2BPZERhF6dQ6'});
+    if(gallery) {
+      return gallery.comments.reverse().splice(0,3);
+      }
+  },
+  nrComments1: function() {
+    var gallery = photoGalleries.findOne({_id: 'E6WzX2BPZERhF6dQ6'});
+    return gallery.comments.length;
+  }
 });
 Template.photoGallerie1.events({
   'submit form': function(e) {
@@ -53,18 +57,22 @@ Template.photoGallerie2.helpers({
 			return gallery.title;
 		}
 	},
-    photos: function(){
-        var gallery = photoGalleries.findOne({_id: 'J3tQjxRi84uZ8TvhY'});
-        if(gallery) {
-            return gallery.photos;
-        }
-    },
-    comments: function(){
-        var gallery = photoGalleries.findOne({_id: 'J3tQjxRi84uZ8TvhY'});
-        if(gallery) {
-            return gallery.comments.reverse().splice(0,3);
-        }
-    }
+  photos: function(){
+      var gallery = photoGalleries.findOne({_id: 'J3tQjxRi84uZ8TvhY'});
+      if(gallery) {
+          return gallery.photos;
+      }
+  },
+  comments: function(){
+      var gallery = photoGalleries.findOne({_id: 'J3tQjxRi84uZ8TvhY'});
+      if(gallery) {
+          return gallery.comments.reverse().splice(0,3);
+      }
+  },
+  nrComments2: function () {
+    var gallery = photoGalleries.findOne({_id: 'J3tQjxRi84uZ8TvhY'});
+    return gallery.comments.length;
+  }
 });
 Template.photoGallerie2.events({
   'submit form': function(e) {

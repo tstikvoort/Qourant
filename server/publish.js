@@ -7,14 +7,14 @@ Meteor.publish('photoGalleries', function(){
 Meteor.publish('knowYourCompany', function(){
   	return knowYourCompany.find();
 });
-Meteor.publish("tasks020", function() {
-   	return Tasks020.find();
+Meteor.publish("groceries020", function() {
+   	return groceries020.find();
 });
-Meteor.publish("tasks070", function() {
-   	return Tasks070.find();
+Meteor.publish("groceries070", function() {
+   	return groceries070.find();
 });
-Meteor.publish("tasksSF", function() {
-   	return TasksSF.find();
+Meteor.publish("groceriesQSA", function() {
+   	return groceriesQSA.find();
 });
 Meteor.publish("searchResults", function() {
    	return searchResults.find();

@@ -21,6 +21,8 @@
 	overflow: hidden;*/
 }
 
+
+
 /* Header */
 header h1 {
     font-family: 'canterburyregular';
@@ -71,6 +73,24 @@ input:focus,textarea:focus,select:focus{
   -moz-box-shadow:none;
   box-shadow:none;
   outline: none;
+}
+
+/* Inputs */
+input[type="submit"] {
+	display: none;
+}
+
+input{
+	background:  #ffe64d;
+	border: none;
+	padding: 10px;
+	width: 100%;
+}
+
+input::-webkit-input-placeholder{
+	color:#5b5b5a;
+	font-size: 18px;
+		font-style: italic;
 }
 
 body {
@@ -144,6 +164,7 @@ header + .navbar-form {
 /*    			Widgets  	  		  */
 /*#################################*/
 
+/* ------------------------------- */
 /* Header widgets */
 #header_widgets {
 	background-color: white;
@@ -167,15 +188,68 @@ header + .navbar-form {
 }
 
 #header_widgets input::-webkit-input-placeholder{
-	color:#1C1C1B;
+	color:#828282;
 	font-size: 16px;
 	font-style: italic;
-	text-decoration:underline;
+/*	text-decoration:underline;*/
 } 
 
+/* ------------------------------- */
+/* General Stuff for Widgets */
+#column_wrapper .widget {
+	margin-top: 20px;
+	background-color: white;
+	padding: 0 20px 20px 20px;
+}
+
+.widget .comments {
+	overflow: hidden;
+}
+
+.widget .nrComments {
+	width: 15%;
+	float: left;
+	max-height: 40px;
+}
+
+.widget .nrComments a {
+	display: inline-block;
+	padding: 10px 10px;
+}
+
+.widget section.comments form {
+	width: 85%;
+	float: right;
+}
+
+.widget .nrComments i {
+	background-image: url(/icons/commentCloud.png);
+	background-size: 16px 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: black;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-left: 5px;
+}
+.widget .nrComments {
+	background-color: black;
+}
+
+.widget .nrComments span {
+	color: white;
+}
+
+
+
+/* ------------------------------- */
+/* Birthdays */
 #birthdays {
 	font-size: 16px;
 }
+
+/* ------------------------------- */
 /* Q 0f the Week */
 #Q_of_the_week {
 /*	margin-bottom: 20px;*/
@@ -196,18 +270,17 @@ header + .navbar-form {
 	font-size: 22px;
 }
 
+/* ------------------------------- */
 /* Columns */
 #column_wrapper {
 	overflow: hidden;
 }
 
+/* ------------------------------- */
 /* General */
-#column_wrapper .widget {
-	margin-top: 20px;
-	background-color: white;
-	padding: 0 20px 20px 20px;
-}
 
+
+/* ------------------------------- */
 /* Font */
 #column_wrapper h2 {
 	font-size: 21px;
@@ -220,22 +293,7 @@ header + .navbar-form {
 	font-size: 22px;
 }
 
-/* Inputs */
-input[type="submit"] {
-	display: none;
-}
 
-input{
-	background:  #ffe64d;
-	border: none;
-	padding: 10px;
-	width: 100%;
-}
-
-input::-webkit-input-placeholder{
-	color:#1C1C1B;
-	font-size: 18px;
-}
 
 /* Know Your Company*/
 .knowyourcompany p.question {
@@ -294,6 +352,26 @@ section.comments {
 .groceries .right {
 	width: 77%;
 	float: right;
+}
+
+.groceries header {
+	background-color: black;
+	width: 100%;
+	overflow: hidden;
+	color: white;
+}
+.groceries header a {
+	overflow: hidden;
+
+}
+
+.groceries header h2 {
+	display: inline;
+}
+
+.header_widget .groceries header span {
+	color: white;
+
 }
 
 .groceries nav ul {
@@ -363,7 +441,7 @@ section.comments {
   text-decoration: line-through;
 }
 
-.groceries .wrap070,.wrapSF {
+.groceries .wrap070,.wrapQSA {
 	display: none;
 }
 
@@ -408,6 +486,11 @@ section.comments {
 #whos_in nav ul li.act, .groceries nav ul li:hover {
 	background: black;
 	color: white;
+}
+
+#whos_in .act {
+	color: white;
+	background-color: black;
 }
 
 #whos_in #whos_in_070 {
@@ -560,7 +643,7 @@ section.comments {
 		font-size: 70px;
 	}
 
-	header span {
+	header > span {
 		display: block;
 		text-align: center;
 		padding: 0;

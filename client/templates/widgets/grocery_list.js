@@ -1,24 +1,33 @@
-Meteor.subscribe('tasks020');
-Meteor.subscribe('tasks070');
-Meteor.subscribe('tasksSF');
+Meteor.subscribe('groceries020');
+Meteor.subscribe('groceries070');
+Meteor.subscribe('groceriesQSA');
 // This code only runs on the client
 Template.grocery_list.helpers({
-  tasks020: function () {
-    return Tasks020.find({}, {sort: {createdAt: -1}, limit: 2});
+  groceries020: function () {
+    return groceries020.find({}, {sort: {createdAt: -1}, limit: 2});
   },
-  tasks070: function () {
-    return Tasks070.find({}, {sort: {createdAt: -1}, limit: 2});
+  groceries070: function () {
+    return groceries070.find({}, {sort: {createdAt: -1}, limit: 2});
   },
-  tasksSF: function () {
-    return TasksSF.find({}, {sort: {createdAt: -1}, limit: 2});
+  groceriesQSA: function () {
+    return groceriesQSA.find({}, {sort: {createdAt: -1}, limit: 2});
+  },
+  nrItems020: function () {
+    return groceries020.find().count();
+  },
+  nrItems070: function () {
+    return groceries070.find().count();
+  },
+  nrItemsQSA: function () {
+    return groceriesQSA.find().count();
   }
 });
 
 Template.grocery_list.events({
-  "submit .new-task020": function (event) {
+  "submit .new-grocery020": function (event) {
     // This function is called when the new task form is submitted
     var text = event.target.text.value;
-    Tasks020.insert({
+    groceries020.insert({
       text: text,
       createdAt: new Date() // current time
     });
@@ -27,10 +36,10 @@ Template.grocery_list.events({
     // Prevent default form submit
     return false;
   },
-  "submit .new-task070": function (event) {
+  "submit .new-grocery070": function (event) {
     // This function is called when the new task form is submitted
     var text = event.target.text.value;
-    Tasks070.insert({
+    groceries070.insert({
       text: text,
       createdAt: new Date() // current time
     });
@@ -39,10 +48,10 @@ Template.grocery_list.events({
     // Prevent default form submit
     return false;
   },
-  "submit .new-taskSF": function (event) {
+  "submit .new-groceryQSA": function (event) {
     // This function is called when the new task form is submitted
     var text = event.target.text.value;
-    TasksSF.insert({
+    groceriesQSA.insert({
       text: text,
       createdAt: new Date() // current time
     });
@@ -59,9 +68,9 @@ Template.grocery_list.events({
     $(".groceries .groceryListWrapper").hide();
     $(".wrap070").show();
   },
-  "click #openSF": function(event) {
+  "click #openQSA": function(event) {
     $(".groceries .groceryListWrapper").hide();
-    $(".wrapSF").show();
+    $(".wrapQSA").show();
   }
 
 });

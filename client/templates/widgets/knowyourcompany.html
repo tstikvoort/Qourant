@@ -1,7 +1,9 @@
 <template name="knowyourcompany1">
 	<section class="knowyourcompany">
 		<header>
-			<h2>Know Your Company</h2>
+			<a href="/know-your-company-1">
+				<h2>Know Your Company</h2>
+			</a>
 		</header>
 		<p class="question">Q: {{question}}</p>
 		<section class="comments">
@@ -9,19 +11,22 @@
 			{{#each comments}}
 				<li><span class="initials">{{initials}}</span><p>{{comment}}</p></li>
 			{{/each}}
-			</ul>
+			</ul>	
+			<span class="nrComments"><a href="/know-your-company-1"><span>({{nrComments1}})</span><i></i></a></span>
+			<form>
+				<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
+				<input type="hidden" id="_id" value="{{_id}}" />
+				<input type="submit" value="Submit" class="btn btn-primary"/>
+			</form>
 		</section>
-		<form>
-			<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
-			<input type="hidden" id="_id" value="{{_id}}" />
-			<input type="submit" value="Submit" class="btn btn-primary"/>
-		</form>
 	</section>
 </template>
 <template name="knowyourcompany2">
 	<section class="knowyourcompany">
 		<header>
-			<h2>Know Your Company</h2>
+			<a href="/know-your-company-2">
+				<h2>Know Your Company</h2>
+			</a>
 		</header>
 		<p class="question">Q: {{question}}</p>
 		<section class="comments">
@@ -30,11 +35,12 @@
 				<li><span class="initials">{{initials}}</span><p>{{comment}}</p></li>
 			{{/each}}
 			</ul>
+			<span class="nrComments"><a href="/know-your-company-2"><span>({{nrComments2}})</span><i></i></a></span>
+			<form>
+				<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
+				<input type="hidden" id="_id" value="{{_id}}" />
+				<input type="submit" value="Submit" class="btn btn-primary"/>
+			</form>
 		</section>
-		<form>
-			<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
-			<input type="hidden" id="_id" value="{{_id}}" />
-			<input type="submit" value="Submit" class="btn btn-primary"/>
-		</form>
 	</section>
 </template>

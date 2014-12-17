@@ -1,22 +1,17 @@
-<!-- Template for photogallery List -->
-<template name="photoGallerie1">
-	<section class="photoGallerie">
+<template name="knowyourcompanyFull1">
+	<section class="knowyourcompany full fullWidget">
 		<header>
 			<a href="/">
-				<h2>{{title}}</h2>
+				<h2>Know Your Company</h2>
 			</a>
 		</header>
-		<article class="wrapper gallery">
-			{{#each photos}}
-				<a class="grouped_elements photo fancybox" rel="1" href="{{url}}"><img src="{{url}}" alt=""/></a>
-			{{/each}}
-		</article>
+		<p class="question">Q: {{question}}</p>
 		<section class="comments">
-		<ul>
+			<ul>
 			{{#each comments}}
 				<li><span class="initials">{{initials}}</span><p>{{comment}}</p></li>
 			{{/each}}
-			</ul>
+			</ul>	
 			<span class="nrComments"><a href=""><span>({{nrComments1}})</span><i></i></a></span>
 			<form>
 				<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
@@ -26,25 +21,21 @@
 		</section>
 	</section>
 </template>
-<template name="photoGallerie2">
-	<section class="photoGallerie">
+<template name="knowyourcompanyFull2">
+	<section class="knowyourcompany full fullWidget">
 		<header>
 			<a href="/">
-				<h2>{{title}}</h2>
+				<h2>Know Your Company</h2>
 			</a>
 		</header>
-		<article class="wrapper gallery">
-			{{#each photos}}
-				<a class="grouped_elements photo fancybox" rel="2" href="{{url}}"><img src="{{url}}" alt=""/></a>
-			{{/each}}
-		</article>
+		<p class="question">Q: {{question}}</p>
 		<section class="comments">
-		<ul>
+			<ul>
 			{{#each comments}}
 				<li><span class="initials">{{initials}}</span><p>{{comment}}</p></li>
 			{{/each}}
 			</ul>
-			<span class="nrComments"><a href=""><span>({{nrComments2}})</span><i></i></a></span>
+			<span class="nrComments"><a href="/"><span>({{nrComments2}})</span><i></i></a></span>
 			<form>
 				<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
 				<input type="hidden" id="_id" value="{{_id}}" />
