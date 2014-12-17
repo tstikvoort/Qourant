@@ -1,55 +1,18 @@
 <!-- Template for photogallery List -->
-<template name="photoGallerie1">
+<template name="photoGallery">
 	<section class="photoGallerie">
-		<header>
-			<a href="/">
-				<h2>{{title}}</h2>
-			</a>
-		</header>
-		<article class="wrapper gallery">
-			{{#each photos}}
-				<a class="grouped_elements photo fancybox" rel="1" href="{{url}}"><img src="{{url}}" alt=""/></a>
-			{{/each}}
-		</article>
-		<section class="comments">
-		<ul>
-			{{#each comments}}
-				<li><span class="initials">{{initials}}</span><p>{{comment}}</p></li>
-			{{/each}}
-			</ul>
-			<span class="nrComments"><a href=""><span>({{nrComments1}})</span><i></i></a></span>
-			<form>
-				<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
-				<input type="hidden" id="_id" value="{{_id}}" />
-				<input type="submit" value="Submit" class="btn btn-primary"/>
-			</form>
-		</section>
-	</section>
-</template>
-<template name="photoGallerie2">
-	<section class="photoGallerie">
-		<header>
-			<a href="/">
-				<h2>{{title}}</h2>
-			</a>
-		</header>
-		<article class="wrapper gallery">
-			{{#each photos}}
-				<a class="grouped_elements photo fancybox" rel="2" href="{{url}}"><img src="{{url}}" alt=""/></a>
-			{{/each}}
-		</article>
-		<section class="comments">
-		<ul>
-			{{#each comments}}
-				<li><span class="initials">{{initials}}</span><p>{{comment}}</p></li>
-			{{/each}}
-			</ul>
-			<span class="nrComments"><a href=""><span>({{nrComments2}})</span><i></i></a></span>
-			<form>
-				<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
-				<input type="hidden" id="_id" value="{{_id}}" />
-				<input type="submit" value="Submit" class="btn btn-primary"/>
-			</form>
-		</section>
+		{{#with gallery}}
+			<header>
+				<a href="/">
+					<h2>{{title}}</h2>
+				</a>
+			</header>
+			<article class="wrapper gallery">
+				{{#each photos}}
+					<a class="grouped_elements photo fancybox" rel="1" href="{{url}}"><img src="{{url}}" alt=""/></a>
+				{{/each}}
+			</article>
+			{{> comments comments}}
+		{{/with}}
 	</section>
 </template>
