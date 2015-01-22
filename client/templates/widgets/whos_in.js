@@ -1,10 +1,10 @@
 Meteor.subscribe('whosIn');
 Template.whos_in.helpers({
     whosIn_020: function() {
-          return whosIn.find({ presence: 'q020' });
+        return whosIn.find({ presence: 'q020' });
     },
     whosIn_070: function() {
-          return whosIn.find({ presence: 'q070' });
+        return whosIn.find({ presence: 'q070' });
     }
 });
 Template.whos_in.events({

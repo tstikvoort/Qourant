@@ -578,12 +578,8 @@ var data = {
     "presence": "none"
   }]
 };
-
 data = data.presence;
-
 var in_arr = [];
-
-
 if ( whosIn.find().count() === 0 ) {
     data.forEach(function(person){
         whosIn.insert(person);

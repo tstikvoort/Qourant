@@ -2,10 +2,8 @@ Accounts.validateNewUser(function (user) {
     if(user.services.google.email.match(/q42\.nl$/)) {
         return true;
     }
+    // test accounts
     if(user.services.google.email.match(/tstikvoort@gmail.com$/)) {
-        return true;
-    }
-    if(user.services.google.email.match(/tobias@wezz.nl$/)) {
         return true;
     }
     if(user.services.google.email.match(/meijerb90@gmail.com$/)) {

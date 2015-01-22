@@ -3,6 +3,5 @@ Template.fun_task.events({
 		$(event.currentTarget)
 			.addClass('done')
 			.text('Well done!');
-		
 	}
 });

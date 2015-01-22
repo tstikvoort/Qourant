@@ -1,23 +1,23 @@
 Meteor.publish('slidepics', function(){
-  	return slidepics.find();
+    return slidepics.find();
 });
 Meteor.publish('photoGalleries', function(){
-  	return photoGalleries.find();
+    return photoGalleries.find();
 });
 Meteor.publish('knowYourCompany', function(){
-  	return knowYourCompany.find();
+    return knowYourCompany.find();
 });
 Meteor.publish("groceries020", function() {
-   	return groceries020.find();
+    return groceries020.find();
 });
 Meteor.publish("groceries070", function() {
-   	return groceries070.find();
+    return groceries070.find();
 });
 Meteor.publish("groceriesQSA", function() {
-   	return groceriesQSA.find();
+    return groceriesQSA.find();
 });
 Meteor.publish("searchResults", function() {
-   	return searchResults.find();
+    return searchResults.find();
 });
 Meteor.publish("whosIn", function() {
     return whosIn.find();
@@ -29,13 +29,14 @@ Meteor.publish("groceries", function(){
     return groceries.find();
 });
 Meteor.publish("users", function () {
-  return Meteor.users.find(
-    {_id: this.userId},
-    {fields: {'services': 1}});
+    return Meteor.users.find(
+        {_id: this.userId},
+        {fields: {'services': 1}}
+    );
 });
 Meteor.publish("calendar", function(){
-  return calendar.find();
+    return calendar.find();
 });
 Meteor.publish("postComments", function(){
-  return postComments.find();
-})
+    return postComments.find();
+});

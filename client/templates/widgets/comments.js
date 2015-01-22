@@ -3,7 +3,7 @@ Template.comments.helpers({
         var user = Meteor.user();
         var comment = postComments.findOne(this._id);
         if(comment.user_id == user._id) return true;
-        false;
+        return false;
     }
 });
 Template.comments.events({
@@ -27,7 +27,6 @@ Template.comments.events({
     "click .delete": function () {
         var comment = postComments.findOne(this._id);
         var user = Meteor.user();
-        console.log(comment.user_id == user._id);
         if(comment.user_id == user._id) postComments.remove(this._id);
     }
 });

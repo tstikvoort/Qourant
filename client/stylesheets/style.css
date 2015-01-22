@@ -1,32 +1,80 @@
-/*  Yellow #ffe64d  */
-/*  Green #9cca24  */
-
-
 /*#################################*/
-/*    			Feed Main   		  */
+/*    			main  	  		   */
 /*#################################*/
-* {
+body {
 	font-family: arial;
 	color: #1C1C1B;
+	background-color: black;
 }
-
+h2 {
+	background: black;
+	color: white;
+	text-transform: uppercase;
+	padding: 0.1em;
+	margin: 0;
+	font-family: 'revolutionrevolution'
+}
+h3 {
+	font-family: 'revolutionrevolution'
+}
+a:hover {
+	text-decoration: none;
+}
 .feed.container {
-	max-width: 75%;
+	padding-left:0;
+	padding-right:0;
 	overflow: hidden;
 }
-
-#main {
-	
-/*		max-width: 75%;
-	overflow: hidden;*/
+input:focus,textarea:focus,select:focus{
+  border:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  box-shadow:none;
+  outline: none;
+}
+#left_column {
+	float: left;
+	width: 100%;
+}
+#right_column {
+	float: right;
+	width: 100%;
+}
+#column_wrapper h2 {
+	font-size: 21px;
+	display: inline;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#column_wrapper .widget p {
+	font-size: 22px;
 }
 
 
+/*#################################*/
+/*    			input  	  		   */
+/*#################################*/
+input{
+	background:  #ffe64d;
+	border: none;
+	padding: 10px;
+	width: 100%;
+}
+input[type="submit"] {
+	display: none;
+}
+input::-webkit-input-placeholder{
+	color:#5b5b5a;
+	font-size: 18px;
+	font-style: italic;
+}
 
-/* Header */
+/*#################################*/
+/*    			header  	  	   */
+/*#################################*/
 header h1 {
     font-family: 'canterburyregular';
-	font-size: 156px;
+	font-size: 70px;
 	text-align: center;
 	color: white;
 	margin: 0;
@@ -38,9 +86,7 @@ header .editionDate {
 	color: white;
 	font-size: 22px;
 	position: relative;
-	padding-right: 60px;
-	top: -30px;
-
+	text-align: center;
 }
 header .user{
 	color: white;
@@ -50,73 +96,11 @@ header .user li {
 	display: inline-block;
 }
 
-h2 {
-	background: black;
-	color: white;
-	text-transform: uppercase;
-	padding: 0.1em;
-	margin: 0;
-	font-family: 'revolutionrevolution'
-}
-
-h3 {
-	font-family: 'revolutionrevolution'
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-input:focus,textarea:focus,select:focus{
-  border:none;
-  -webkit-box-shadow:none;
-  -moz-box-shadow:none;
-  box-shadow:none;
-  outline: none;
-}
-
-/* Inputs */
-input[type="submit"] {
-	display: none;
-}
-
-input{
-	background:  #ffe64d;
-	border: none;
-	padding: 10px;
-	width: 100%;
-}
-
-input::-webkit-input-placeholder{
-	color:#5b5b5a;
-	font-size: 18px;
-		font-style: italic;
-}
-
-body {
-	background-color: black;
-}
-
-#left_column {
-	float: left;
-	width: 49%;
-}
-
-#right_column {
-	float: right;
-	width: 49%;
-}
-
-.row {
-	margin:0;
-}
-
 /*#################################*/
-/*    			home  	  	       */
+/*    			login  	  		   */
 /*#################################*/
-header + .navbar-form {
+.navbar-form {
 	margin: 0 auto;
-	margin-top: 15%;
 	width: 300px;
 
 }
@@ -139,11 +123,12 @@ header + .navbar-form {
 	text-align: center;
 	padding:5px 10px;
 }
-.login-button  {
+.navbar-form .login-button  {
 	background: white !important;
 }
+
 /*#################################*/
-/*    			notFound  	  		  */
+/*    			notFound  	  	   */
 /*#################################*/
 .notFound, .getOut {
 	display: block;
@@ -161,24 +146,24 @@ header + .navbar-form {
 }
 
 /*#################################*/
-/*    			Widgets  	  		  */
+/*    			Widgets  	  	   */
 /*#################################*/
 
 /* ------------------------------- */
 /* Header widgets */
 #header_widgets {
 	background-color: white;
-	padding: 20px 15px 15px 15px;
+	padding: 20px;
 	font-weight: bold;
 	margin-bottom: 20px;
+	overflow: hidden;
 }
-.header_widget {
-	/*min-height: 15em;*/
-	padding: 0 5px;
-	width: 33.33%;
+#header_widgets .header_widget {
+	padding: 0;
+	width: 100%;
 	float: left;
+	margin-top: 0;
 }
-
 #header_widgets h2 {
 	font-size: 26px;
 }
@@ -186,263 +171,22 @@ header + .navbar-form {
 #header_widgets input {
 	 background: none;
 }
-
 #header_widgets input::-webkit-input-placeholder{
 	color:#828282;
 	font-size: 16px;
 	font-style: italic;
-/*	text-decoration:underline;*/
 } 
-
-/* ------------------------------- */
-/* General Stuff for Widgets */
-#column_wrapper .widget {
-	margin-top: 20px;
-	background-color: white;
-	padding: 0 20px 20px 20px;
-}
-
-.widget .nrComments {
-	width: 15%;
-	float: left;
-	max-height: 40px;
-}
-
-.widget .nrComments span {
-	display: inline-block;
-	padding: 10px 10px;
-}
-
-.widget section.comments form {
-	width: 85%;
-	float: right;
-}
-
-.widget .nrComments i {
-	background-image: url(/icons/commentCloud.png);
-	background-size: 16px 16px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-color: black;
-	width: 16px;
-	height: 16px;
-	display: inline-block;
-	margin-left: 5px;
-}
-.widget .nrComments {
-	background-color: black;
-}
-
-.widget .nrComments span {
-	color: white;
-}
-
-
 
 /* ------------------------------- */
 /* Birthdays */
 #birthdays {
 	font-size: 16px;
 }
-
-/* ------------------------------- */
-/* Q 0f the Week */
-#Q_of_the_week {
-/*	margin-bottom: 20px;*/
-	padding: 20px;
-	background-color:white;
-}
-
-#Q_of_the_week #main-Qer {
-	max-height: 400px;
-	overflow:hidden;
-}
-#Q_of_the_week #main-Qer video {
-	width: 100%;
-}
-
-#video_comment_now {
-	background-color:#ffe64d;
-	font-size: 22px;
-}
-
-/* ------------------------------- */
-/* Columns */
-#column_wrapper {
-	overflow: hidden;
-}
-
-/* ------------------------------- */
-/* General */
-
-
-/* ------------------------------- */
-/* Font */
-#column_wrapper h2 {
-	font-size: 21px;
-	display: inline;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-#column_wrapper .widget p {
-	font-size: 22px;
-}
-
-
-
-/* Know Your Company*/
-.knowyourcompany p.question {
-	margin: 10px 0;
-	font-size: 22px;
-}
-
-/* Fun TAsks */
-#fun_task button {
-	background-color: #ffe64d;
-	border: none;
-	font-size: 18px;
-	padding: 10px;
-	background-repeat: no-repeat;
-	background-size: 20px 20px;
-	background-position: 10px;
-	transition: all 0.2s linear;
-}
-#fun_task button.done {
-	background-color: #9cca24;
-	background-image: url('/icons/checkmarkWhite.png');
-	color: white;
-	padding-left: 40px;
-}
-/* Comments */
-.comments ul {
-	padding: 0;
-	margin: 0;
-}
-
-section.comments {
-	margin-top: 15px;
-/*	margin-bottom: 25px;*/
-
-}
-.comments li {
-	list-style: none;
-	margin: 5px 0px;
-	margin-bottom: 20px;
-	border-top: 4px solid #9cca24;
-	min-height: 40px;
-}
-.comments li p {
-	font-size: 18px;
-	vertical-align: top;
-	display: inline;
-}
-.commentForm {
-	overflow: hidden;
-}
-/*#################################*/
-/* Groceries List */
-.groceries .left {
-	width: 26%;
-	float: left;
-}
-.groceries .right {
-	width: 72%;
-	float: right;
-}
-.groceries .list {
-	display: none;
-}
-.groceries .list.act {
-	display: block;
-}
-.header_widget .groceries header span {
-	color: white;
-
-}
-
-.groceries nav ul {
-	padding: 0;
-	margin: 0;
-}
-
-.groceries nav ul li  {
-	width: 20%;
-	padding: 8px 10px;
-	list-style: none;
-	width: 100%;
-	text-align: center;
-	font-size: 16px;
-	color: black;
-	background-color:white;
-}
-
-.groceries nav ul li:hover {
-	cursor: pointer;
-}
-
-.groceries nav ul li.act, .groceries nav ul li:hover {
-	background: black;
-	color: white;
-}
-.groceries nav ul li.act span, .groceries nav ul li:hover span {
-	color: white;
-}
-
-/* groceryForm */
-.groceries form input {
-	width: 100%;
-	margin-top: 3%;
-}
-
-.groceries ul li input {
-	width: auto;
-}
-
-/* grocerieLoop */
-.groceries ul {
-  margin: 0;
-  padding: 0;
-}
-
-.groceries .groceriesList li {
-  	list-style: none;
-  	padding: 5px 0;
-  	font-size: 16px;
-}
-
-.delete {
-  float: right;
-  font-weight: bold;
-  background: none;
-  font-size: 1em;
-  border: none;
-  position: relative;
-}
-
-.groceries li .text {
-  margin-left: 10px;
-}
-
-.groceries li.checked {
-  color: #888;
-}
-
-.groceries li.checked .text {
-  text-decoration: line-through;
-}
-
-.groceries .wrap070,.wrapQSA {
-	display: none;
-}
-
-/*#################################*/
-/* birthdays */
 .birthdays .person {
 	padding: 8px 0;
 }
 
-/*#################################*/
+/* ------------------------------- */
 /* Whos_in */
 #whos_in .left {
 	width: 20%;
@@ -498,7 +242,205 @@ section.comments {
 #whos_in .wrap.act {
 	display: block;
 }
-/* lightbox gallery */
+
+/* ------------------------------- */
+/* Groceries List */
+.groceries .left {
+	width: 26%;
+	float: left;
+}
+.groceries .right {
+	width: 72%;
+	float: right;
+}
+.groceries .list {
+	display: none;
+}
+.groceries .list.act {
+	display: block;
+}
+.groceries header span {
+	color: white;
+}
+.groceries nav ul {
+	padding: 0;
+	margin: 0;
+}
+.groceries nav ul li  {
+	width: 20%;
+	padding: 8px 10px;
+	list-style: none;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	color: black;
+	background-color:white;
+}
+.groceries nav ul li:hover {
+	cursor: pointer;
+}
+.groceries nav ul li.act, .groceries nav ul li:hover {
+	background: black;
+	color: white;
+}
+.groceries nav ul li.act span, .groceries nav ul li:hover span {
+	color: white;
+}
+.groceries form input {
+	width: 100%;
+	margin-top: 3%;
+}
+.groceries ul li input {
+	width: auto;
+}
+/* grocerieLoop */
+.groceries ul.groceriesList {
+  margin: 0;
+  padding: 0;
+}
+.groceries .groceriesList li {
+  	list-style: none;
+  	padding: 5px 0;
+  	font-size: 16px;
+}
+.groceries li .text {
+  margin-left: 10px;
+}
+
+.groceries li.checked {
+  color: #888;
+}
+
+.groceries li.checked .text {
+  text-decoration: line-through;
+}
+
+.groceries .wrap070,.wrapQSA {
+	display: none;
+}
+
+/* ------------------------------- */
+/* General Stuff for Widgets */
+.widget {
+	margin-top: 20px;
+	background-color: white;
+	padding: 0 20px 20px 20px;
+}
+
+.widget .nrComments {
+	width: 15%;
+	float: left;
+	max-height: 40px;
+}
+
+.widget .nrComments span {
+	display: inline-block;
+	padding: 10px 10px;
+}
+
+.widget section.comments form {
+	width: 85%;
+	float: right;
+}
+
+.widget .nrComments i {
+	background-image: url(/icons/commentCloud.png);
+	background-size: 16px 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: black;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-left: 5px;
+}
+.widget .nrComments {
+	background-color: black;
+}
+
+.widget .nrComments span {
+	color: white;
+}
+.widget .delete {
+  	float: right;
+  	font-weight: bold;
+  	background: none;
+  	font-size: 1.25em;
+  	border: none;
+  	position: relative;
+}
+
+/* ------------------------------- */
+/* Comments */
+.comments {
+	margin-top: 15px;
+}
+.comments ul {
+	padding: 0;
+	margin: 0;
+}
+.comments li {
+	list-style: none;
+	margin: 5px 0px;
+	margin-bottom: 20px;
+	border-top: 4px solid #9cca24;
+	min-height: 40px;
+}
+.comments li p {
+	font-size: 18px;
+	vertical-align: top;
+	display: inline;
+}
+.commentForm {
+	overflow: hidden;
+}
+
+/* ------------------------------- */
+/* Q 0f the Week */
+#Q_of_the_week {
+	background-color:white;
+}
+#Q_of_the_week h2 {
+	font-size: 21px;
+	display: inline;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#Q_of_the_week #main-Qer {
+	max-height: 400px;
+	overflow:hidden;
+}
+#Q_of_the_week #main-Qer video {
+	width: 100%;
+}
+
+/* ------------------------------- */
+/* Know Your Company*/
+.knowyourcompany p.question {
+	margin: 10px 0;
+}
+
+/* ------------------------------- */
+/* Fun tasks */
+#fun_task button {
+	background-color: #ffe64d;
+	border: none;
+	font-size: 18px;
+	padding: 10px;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: 10px;
+	transition: all 0.2s linear;
+}
+#fun_task button.done {
+	background-color: #9cca24;
+	background-image: url('/icons/checkmarkWhite.png');
+	color: white;
+	padding-left: 40px;
+}
+
+/* ------------------------------- */
+/* gallery */
 .gallery img {
 	display: none;
 	max-width: 100%;
@@ -528,23 +470,23 @@ section.comments {
 /*     FULL SCREEN	Widgets  	  */
 /*#################################*/
 
-.backButton {
+.fullWidget .backButton {
 	float: right;
 	color: white;
 }
-.backButton:hover {
+.fullWidget .backButton:hover {
 	color: white;
 }
-.full .nrComments {
+.fullWidget .nrComments {
 	display: none;
 }
+/* ------------------------------- */
 /* Full screen Search */
 .fullWidget {
 	background-color: white;
 	padding: 0 20px 20px 20px;
 	overflow: hidden;
 }
-
 .search_results_wrapper h3 {
 	background-color: #9cca24;
 	color: white;
@@ -573,40 +515,23 @@ section.comments {
 	margin-bottom: 40px;
 }
 
+/* ------------------------------- */
 /* Groceries */
-
 .fullWidget .groceries .groceryListWrapper {
 	display: none;
 }
 .fullWidget .groceries .groceryListWrapper.act {
 	display: block;
 }
-/* photogallery */ 
 
-/* Q_of_the_week */
-#main-vid {
-	background-image: url(qvid.gif);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	height: 500px;
-}
-
-.comment_now {
-	background-color: rgb(253,221,14);
-	background-color: #ffdd0e;
-	color: black;
-	font-size: 22px;
-	padding: 0.4em 0.8em;
-}
-
-
+/* ------------------------------- */
 /* calendar */
-.calendar {
-
-}
 .calendar > section {
 	min-height: 80px;
 	margin-bottom: 10px;
+}
+.calendar > section:last-child {
+	margin-bottom: 0;
 }
 .calendar section header {
 	background: #c6c6c5;
@@ -644,85 +569,10 @@ section.comments {
 	display: inline-block;
 	font-size: 16px;
 }
-
+/* ------------------------------- */
 /* video */
-section.video iframe {
+.video iframe {
 	width: 100%;
-}
-
-@media (max-width: 720px) {
-	/* General Stuff*/
-	.feed.container {
-		padding-left:0;
-		padding-right:0;
-	}
-	/* Header Widgets */
-	#header_widgets {
-		display: none;
-	}
-	/* Q'er of the week*/
-	#Q_of_the_week {
-		padding:0;
-	}
-	#video_comment_now {
-		text-align: center;
-	}
-
-
-}
-
-
-@media (max-width: 900px) {
-	/* General Stuff*/
-	.feed.container {
-		max-width: 100%;
-	}
-	#left_column {
-		width: 100%;
-	}	
-	#right_column {
-		width: 100%;
-	}
-	#container {
-		width: 100%;
-	}
-
-	.header_widget {
-
-	padding: 0 5px;
-	width: 100%;
-	float: left;
-}
-
-
-
-}
-
-@media (max-width: 1080px) {
-	/* General Stuff*/
-	.feed.container {
-		width: 100%;
-		max-width: 100%;
-	}
-
-	/* Header */
-	header h1 {
-		font-size: 70px;
-	}
-
-	header > span {
-		display: block;
-		text-align: center;
-		padding: 0;
-		font-size: 22px;
-		position: static;
-
-
-	}
-	header .editionDate {
-		top: 0;
-	}
-
 }
 
 /*#################################*/
@@ -782,5 +632,56 @@ section.video iframe {
          url('fonts/revolution.svg#revolutionrevolution') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+@media (min-width: 767px) {
+	/* General Stuff */
+	.feed.container {
+		max-width: 100%;
+	}
+	#left_column {
+		width: 49%;
+	}	
+	#right_column {
+		width: 49%;
+	}
+	#header_widgets .header_widget {
+		width: calc(33.33% - 13.333px);
+		float: left;
+		margin-right: 20px;
+	}
+	#header_widgets .header_widget:last-child {
+		margin-right: 0;
+	}
+	header h1 {
+		font-size: 156px;
+	}
+	header h1 {
+		font-size: 70px;
+	}
+	header > span {
+		display: block;
+		text-align: center;
+		padding: 0;
+		font-size: 22px;
+		position: static;
+	}
+	header h1 {
+		font-size: 140px;
+	}
+	header .editionDate {
+		display: block;
+		text-align: right;
+		color: white;
+		font-size: 22px;
+		position: relative;
+		padding-right: 60px;
+		top: -30px;
+	}
+}
+@media (min-width: 1000px) {
+	.feed.container {
+		width: 75%;
+		max-width: 1100px;
+	}
 }

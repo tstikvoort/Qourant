@@ -50,5 +50,4 @@ if (photoGalleries.find().count() === 0) {
         ],
         date: new Date()
     });
-
 }

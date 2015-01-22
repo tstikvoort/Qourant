@@ -3,24 +3,24 @@ Meteor.subscribe('groceries070');
 Meteor.subscribe('groceriesQSA');
 // This code only runs on the client
 Template.grocery_list.helpers({
-  groceries020: function () {
-    return groceries020.find({}, {sort: {createdAt: -1}, limit: 2});
-  },
-  groceries070: function () {
-    return groceries070.find({}, {sort: {createdAt: -1}, limit: 2});
-  },
-  groceriesQSA: function () {
-    return groceriesQSA.find({}, {sort: {createdAt: -1}, limit: 2});
-  },
-  nrItems020: function () {
-    return groceries020.find().count();
-  },
-  nrItems070: function () {
-    return groceries070.find().count();
-  },
-  nrItemsQSA: function () {
-    return groceriesQSA.find().count();
-  }
+    groceries020: function () {
+        return groceries020.find({}, {sort: {createdAt: -1}, limit: 2});
+    },
+    groceries070: function () {
+        return groceries070.find({}, {sort: {createdAt: -1}, limit: 2});
+    },
+    groceriesQSA: function () {
+        return groceriesQSA.find({}, {sort: {createdAt: -1}, limit: 2});
+    },
+    nrItems020: function () {
+        return groceries020.find().count();
+    },
+    nrItems070: function () {
+        return groceries070.find().count();
+    },
+    nrItemsQSA: function () {
+        return groceriesQSA.find().count();
+    }
 });
 
 Template.grocery_list.events({

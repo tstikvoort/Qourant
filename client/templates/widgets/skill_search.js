@@ -1,9 +1,6 @@
 Meteor.subscribe('searchResults');
-
 Template.skill_search.events({
-
 	"submit #skill_search_form": function (event) {
-
 		var skillDB = [
 				{
 					'name': 'Tobias',
@@ -43,40 +40,21 @@ Template.skill_search.events({
 					'skills': ['Javascript', 'html5', 'css3', 'meteor', 'ASP.NET', 'C++', 'Python', 'Haskell']
 				}
 		];
-
-		Meteor.call('removeAllSearchResults')
-		
-
+		Meteor.call('removeAllSearchResults');
 		var text = event.target.text.value;
-
 		for( i = 0; i < skillDB.length; i++ ){
-
 			var skills = skillDB[i].skills;
-			if (  jQuery.inArray( text , skills ) > -1 ) {
-		
-				   searchResults.insert({
-			      	name: skillDB[i].name,
-			      	lastname: skillDB[i].lastname,
-			      	skills: skillDB[i].skills,
-			      	createdAt: new Date() // current time
-					});
+			if (jQuery.inArray( text , skills ) > -1 ) {
+				searchResults.insert({
+					name: skillDB[i].name,
+					lastname: skillDB[i].lastname,
+					skills: skillDB[i].skills,
+					createdAt: new Date()
+				});
 			}
-
 		}
-
-
-		// Clear form
-	   event.target.text.value = "";
-	   Router.go('/search-results');
-	   // Prevent default form submit
-	   return false;
-	 
+		event.target.text.value = "";
+		Router.go('/search-results');
+		return false;
 	}
-
 });
-
-
-		
-
-
-

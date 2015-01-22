@@ -1,11 +1,10 @@
 <!-- Template for the main Qourant Feed -->
 <template name="qourant">
-	{{calendar}}
-  <div class="">
+  	<div class="">
   		<!-- Header containing Title + date -->
 		{{#if currentUser}}
 		<!-- Header Widgets -->
-		<section id="header_widgets" class="row">
+		<section id="header_widgets">
 	 		<section class="widget header_widget" id="grocery_list">
 	 			{{> grocery_list}}
 	 		</section>	
