@@ -2,12 +2,11 @@
 <template name="Q_of_the_week">
   <div class="wrapper">
   		<div id="main-Qer">	
-  			<video src="1.mp4" controls>
+  			<video controls>
+  				<source type="video/mp4" 	src="video.mp4">
+  				<source type="video/webm" 	src="video.webm">
   				U kunt deze video niet afspelen.
   			</video>
   		</div>
-		<div class="comments video_comments">
-				{{> Q_of_the_week_comments}}
-		</div>
   </div>
 </template>

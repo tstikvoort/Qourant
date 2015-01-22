@@ -3,13 +3,13 @@
 	<section class="photoGallerie">
 		{{#with gallery}}
 			<header>
-				<a href="/">
+				<a href="gallery/{{_id}}">
 					<h2>{{title}}</h2>
 				</a>
 			</header>
 			<article class="wrapper gallery">
 				{{#each photos}}
-					<a class="grouped_elements photo fancybox" rel="1" href="{{url}}"><img src="{{url}}" alt=""/></a>
+					<a class="grouped_elements photo fancybox" rel="{{../_id}}" href="{{url}}"><img src="{{url}}" alt=""/></a>
 				{{/each}}
 			</article>
 			{{> comments comments}}

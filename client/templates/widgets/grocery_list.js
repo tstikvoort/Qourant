@@ -24,53 +24,49 @@ Template.grocery_list.helpers({
 });
 
 Template.grocery_list.events({
-  "submit .new-grocery020": function (event) {
-    // This function is called when the new task form is submitted
-    var text = event.target.text.value;
-    groceries020.insert({
-      text: text,
-      createdAt: new Date() // current time
-    });
-    // Clear form
-    event.target.text.value = "";
-    // Prevent default form submit
-    return false;
-  },
-  "submit .new-grocery070": function (event) {
-    // This function is called when the new task form is submitted
-    var text = event.target.text.value;
-    groceries070.insert({
-      text: text,
-      createdAt: new Date() // current time
-    });
-    // Clear form
-    event.target.text.value = "";
-    // Prevent default form submit
-    return false;
-  },
-  "submit .new-groceryQSA": function (event) {
-    // This function is called when the new task form is submitted
-    var text = event.target.text.value;
-    groceriesQSA.insert({
-      text: text,
-      createdAt: new Date() // current time
-    });
-    // Clear form
-    event.target.text.value = "";
-    // Prevent default form submit
-    return false;
-  },
-  "click #open020": function(event) {
-    $(".groceries .groceryListWrapper").hide();
-    $(".wrap020").show();
-  },
-  "click #open070": function(event) {
-    $(".groceries .groceryListWrapper").hide();
-    $(".wrap070").show();
-  },
-  "click #openQSA": function(event) {
-    $(".groceries .groceryListWrapper").hide();
-    $(".wrapQSA").show();
-  }
-
+    "submit .new-grocery020": function (event) {
+        event.preventDefault();
+        var text = event.target.text.value;
+        if(text != '') {
+            groceries020.insert({
+                text: text,
+                createdAt: new Date()
+            });
+            event.target.text.value = "";
+        }
+    },
+    "submit .new-grocery070": function (event) {
+        event.preventDefault();
+        var text = event.target.text.value;
+        if(text != '') {
+            groceries070.insert({
+              text: text,
+              createdAt: new Date()
+            });
+            event.target.text.value = "";
+        }
+    },
+    "submit .new-groceryQSA": function (event) {
+        event.preventDefault();
+        var text = event.target.text.value;
+        if(text != '') {
+            groceriesQSA.insert({
+              text: text,
+              createdAt: new Date()
+            });
+            event.target.text.value = "";
+        }
+    },
+    "click #open020": function(event) {
+        $(".groceries .groceryListWrapper").hide();
+        $(".wrap020").show();
+    },
+    "click #open070": function(event) {
+        $(".groceries .groceryListWrapper").hide();
+        $(".wrap070").show();
+    },
+    "click #openQSA": function(event) {
+        $(".groceries .groceryListWrapper").hide();
+        $(".wrapQSA").show();
+    }
 });

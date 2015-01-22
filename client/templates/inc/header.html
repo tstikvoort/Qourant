@@ -7,7 +7,7 @@
 		</div>
 		{{#if currentUser}}
 			<div class="user">
-				{{name}} {{> loginButtons}}
+				{{currentUser.profile.name}} {{> loginButtons}}
 			</div>
 		{{/if}}
 	</header>

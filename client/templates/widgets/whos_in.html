@@ -11,26 +11,26 @@
 				<li id="flip_in_QSA" class="flip">QSA</li>
 			</ul>
 		</nav>
-		<section id="whos_in_020" class="wrap right">
+		<section id="whos_in_020" class="whos_inWrap wrap right act">
 			{{#each whosIn_020 }}
-			   <span>	
-			   	{{initial}}
+			   	<span>	
+			   		<img src="{{avatar}}" alt="{{name}}"/>
 				</span>
 			{{/each}}
 		</section>
-		<section id="whos_in_070" class="wrap right">
+		<section id="whos_in_070" class="whos_inWrap wrap right">
 			{{#each whosIn_070}}
-				<span>			
-			   	{{ initial }}
+				<span>	
+			   		<img src="{{avatar}}" alt="{{name}}"/>
 				</span>
 			{{/each}}
 		</section>
-<!-- 		<section id="whos_in_QSA">
+		<section id="whos_in_QSA" class="whos_inWrap">
 			{{#each in_QSA}}
-				<span>
-			   	{{ this }}
-			   <span>
+				<span>	
+			   		<img src="{{avatar}}" alt="{{name}}"/>
+				</span>
 			{{/each}}
-		</section> -->
+		</section>
   </section>
 </template>

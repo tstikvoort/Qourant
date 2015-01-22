@@ -25,7 +25,17 @@ Meteor.publish("whosIn", function() {
 Meteor.publish("userData", function () {
     return Meteor.users.find();
 });
+Meteor.publish("groceries", function(){
+    return groceries.find();
+});
 Meteor.publish("users", function () {
-  return Meteor.users.find({_id: this.userId},
+  return Meteor.users.find(
+    {_id: this.userId},
     {fields: {'services': 1}});
 });
+Meteor.publish("calendar", function(){
+  return calendar.find();
+});
+Meteor.publish("postComments", function(){
+  return postComments.find();
+})

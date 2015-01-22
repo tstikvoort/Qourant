@@ -585,31 +585,7 @@ var in_arr = [];
 
 
 if ( whosIn.find().count() === 0 ) {
-    for( i = 0; i < data.length; i ++ ) {
-
-        if( data[i].presence ===  'q020' ) {
-            var temp_initial    = data[i].name.split(/[ ,]+/);
-            var firstChar       = temp_initial[0].charAt(0);
-            // var indexLast       = temp_initial.length -1;
-            var lastChar        = temp_initial[1].charAt(0);
-            var temp_initial    = firstChar + lastChar;
-            var temp_initial    = temp_initial.toUpperCase();
-
-            var temp_020 = { 'initial': temp_initial, 'name': data[i].name, 'email': data[i].email, 'presence': data[i].presence };
-            whosIn.insert(temp_020);
-        }
-
-        if( data[i].presence === 'q070') {
-            var temp_initial    = data[i].name.split(/[ ,]+/);
-            var firstChar       = temp_initial[0].charAt(0);
-            // var indexLast       = temp_initial.length -1;
-            var lastChar        = temp_initial[1].charAt(0);
-            var temp_initial    = firstChar + lastChar;
-            var temp_initial    = temp_initial.toUpperCase();
-
-            var temp_070 = { 'initial': temp_initial, 'name': data[i].name, 'email': data[i].email, 'presence': data[i].presence };
-            whosIn.insert(temp_070);
-        }
-
-    }   
+    data.forEach(function(person){
+        whosIn.insert(person);
+    });
 }

@@ -1,0 +1,19 @@
+<template name="calendar">
+	<section class="calendar">
+		<header>
+			<h2>Calendar</h2>
+		</header>
+		{{#each events}}
+			<section class="event">
+				<header>
+					{{summary}}
+				</header>
+				<article>
+					<section class="time">{{location}}</section>
+					<section class="location">{{startTime}}</section>
+					<section><span class="day">{{day}}</span><span class="month">{{month}}</span></section>
+				</article>
+			</section>
+		{{/each}}
+	</section>
+</template>

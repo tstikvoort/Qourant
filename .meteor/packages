@@ -13,4 +13,5 @@ accounts-google
 ian:accounts-ui-bootstrap-3
 service-configuration
 sacha:spin
+jagi:google-oauth-jwt
 

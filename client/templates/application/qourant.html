@@ -1,5 +1,6 @@
 <!-- Template for the main Qourant Feed -->
 <template name="qourant">
+	{{calendar}}
   <div class="">
   		<!-- Header containing Title + date -->
 		{{#if currentUser}}
@@ -17,7 +18,7 @@
 	 	</section>
 
 	 	<!-- Q-of-the-week -->
-	   <section class="widget" id="Q_of_the_week">
+	    <section class="widget" id="Q_of_the_week">
 	    	{{> Q_of_the_week}}
 		</section>
 
@@ -29,13 +30,16 @@
 					{{> fun_task}}
 				</section>
 				<section class="widget">
+					{{> photoGallery photoGallery1}}
+				</section>
+				<section class="widget">
 					{{> knowyourcompany knowyourcompany1}}
 				</section>
-					    	<section class="widget" id="Q_of_the_week">
+				<section class="widget" id="Q_of_the_week">
 		    		{{> slideCam}}
 				</section>
 				<section class="widget">
-					{{> photoGallery photoGallery1}}
+					{{> video wootcamp2014}}
 				</section>
 			</section>
 			<!-- Right Column -->
@@ -44,10 +48,19 @@
 					{{> skill_search}}
 				</section>
 				<section class="widget">
+					{{> calendar}}
+				</section>
+				<section class="widget">
+					{{> video qUitje2014}}
+				</section>
+				<section class="widget">
 					{{> photoGallery photoGallery2}}
 				</section>
 				<section class="widget">
 					{{> knowyourcompany knowyourcompany2}}
+				</section>
+				<section class="widget">
+					{{> video codeuur}}
 				</section>
 			</section>
 		</section>

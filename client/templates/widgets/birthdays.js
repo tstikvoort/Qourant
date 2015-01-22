@@ -14,24 +14,24 @@ function _calculateDaysToBirthday(birthday) {
 	}
 	return Math.floor((birthday - today) / (1000*60*60*24))
 }
-for (var i = 0; i < persons.length; i++) {
-	birthday = persons[i].birthday;
+persons.forEach(function(person){
+	birthday = person.birthday;
 	birthday = birthday.split('-');
-	birthday = birthday[1] + '-' + birthday[0] + '-' +  birthday[2];
-	persons[i].birthday = birthday;
+	birthday = birthday[1] + '/' + birthday[0] + '/' +  birthday[2];
+	person.birthday = birthday;
 	daysToBirthday = _calculateDaysToBirthday(birthday);
-	persons[i].daysToBirthday = daysToBirthday;
+	person.daysToBirthday = daysToBirthday;
 	age = _calculateAge(birthday);
 	if(daysToBirthday == 0) {
-		persons[i].message = ' turns ' + age + ' today!';
+		person.message = ' turns ' + age + ' today!';
 	}
 	else if (daysToBirthday == 1) {
-		persons[i].message = ' turns ' + age + ' tomorrow!';
+		person.message = ' turns ' + age + ' tomorrow!';
 	}
 	else {
-		persons[i].message = ' turns ' + age + ' in ' + daysToBirthday + ' days.';
+		person.message = ' turns ' + age + ' in ' + daysToBirthday + ' days.';
 	}
-}
+})
 persons = _.sortBy(persons, function(person){ return person.daysToBirthday;});
 persons = persons.splice(0,3);
 Template.birthdays.helpers({

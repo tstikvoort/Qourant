@@ -4,16 +4,15 @@ Meteor.subscribe('groceriesQSA');
 // This code only runs on the client
 Template.groceryListFull.helpers({
   groceries020: function () {
-    return groceries020.find({}, {sort: {createdAt: -1}, limit: -1});
+    return groceries020.find();
   },
   groceries070: function () {
-    return groceries070.find({}, {sort: {createdAt: -1}, limit: -1});
+    return groceries070.find();
   },
   groceriesQSA: function () {
-    return groceriesQSA.find({}, {sort: {createdAt: -1}, limit: -1});
+    return groceriesQSA.find();
   }
 });
-
 Template.groceryListFull.events({
   "submit .new-grocery020": function (event) {
     // This function is called when the new task form is submitted

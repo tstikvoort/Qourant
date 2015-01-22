@@ -2,9 +2,9 @@
 <template name="groceryListFull">
 	<section class="wrapper groceries full fullWidget">
 		<!-- 020 -->
-		<div class="groceryListWrapper wrap020">
+		<div class="groceryListWrapper wrap020 act">
 			<header>
-			   <h2>Grocery List</h2>
+			   <h2>Grocery List<a href="/" class="backButton">x</a></h2>
 			</header>
 			<nav class="left">
 				<ul>
@@ -15,11 +15,11 @@
 			</nav>
 			 <section class="right">
 		   	<ul class="groceriesList">
-		    		{{#each tasks020}}
-		    			{{> grocery_list_task}}
+		    	{{#each groceries020}}
+		    		{{> grocery_list_task}}
 		      	{{/each}}
 		   	</ul>
-		   	<form class="new-task020">
+		   	<form class="new-grocery020">
 			     	<input type="text" name="text" placeholder="Type to add" />
 			   </form>
 			</section>
@@ -27,45 +27,45 @@
 		<!-- 070 -->
 		<div class="groceryListWrapper wrap070">
 			<header>
-			   <h2>Grocery List</h2>
+			   <h2>Grocery List <a href="/" class="backButton">x</a></h2>
 			</header>
 			<nav class="left">
 				<ul>
 			    	<li id="open020">020</li>
 					<li id="open070" class="act">070</li>
-					<li id="openSF">QSA</li>
+					<li id="openQSA">QSA</li>
 				</ul>
 			</nav>
 			<section class="right">
 				   	<ul class="groceriesList">
-				    	{{#each tasks070}}
+				    	{{#each groceries070}}
 					    	{{> grocery_list_task}}
 					    {{/each}}
 				   	</ul>
-			  		<form class="new-task070">
+			  		<form class="new-grocery070">
 			  	    	<input type="text" name="text" placeholder="Type to add" />
 			  	  	</form>
 			</section>
 		</div>
 		<!-- QSAgroceries -->
-		<div class="groceryListWrapper wrapSF">
+		<div class="groceryListWrapper wrapQSA">
 			<header>
-				<h2>Grocery List</h2>
+				<h2>Grocery List <a href="/" class="backButton">x</a></h2>
 			</header>
 			<nav class="left">
 				<ul>
 			    	<li id="open020">020</li>
 					<li id="open070">070</li>
-					<li id="openSF" class="act">QSA</li>
+					<li id="openQSA" class="act">QSA</li>
 				</ul>
 			</nav>
 			<section class="right">
 				<ul class="groceriesList">
-				   {{#each tasksSF}}
+				   {{#each groceriesQSA}}
 					   {{> grocery_list_task}}
 					{{/each}}
 				</ul>
-			  	<form class="new-taskSF">
+			  	<form class="new-groceryQSA">
 			  	   <input type="text" name="text" placeholder="Type to add" />
 			  	</form>
 			</section>

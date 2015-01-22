@@ -24,7 +24,6 @@ Template.skill_search.events({
 					'job': ['Interaction Engineer', 'Software Engineer'],
 					'skills': ['Prototyping', 'interaction', 'interactionexpert', 'html5', 'css3']
 				},
-			
 				{
 					'name': 'Thomas',
 					'lastname': 'Harkema',

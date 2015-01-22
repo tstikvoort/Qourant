@@ -1,8 +1,5 @@
 Meteor.subscribe("users");
 Template.header.helpers({
-	name: function(){
-		return Meteor.user().services.google.name;
-	},
 	editionDate: function() {
 		d = new Date(new Date());
 		var day = d.getDay(),

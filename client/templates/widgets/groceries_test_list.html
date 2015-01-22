@@ -1,0 +1,30 @@
+<template name="groceryTestList">
+	<div class="wrapper groceries">
+		<header>
+		    <a href="/groceries">
+		      	<h2>Grocery List</h2>
+		    </a>
+		</header>
+		<nav class="left">
+			<ul>
+				{{#each lists}}
+			    	<li id="grocery{{title}}" class="{{#if active}} act {{/if}}">{{title}}({{groceries.length}})</li>
+			    {{/each}}
+			</ul>
+		</nav>
+		{{#each lists}}
+		  	<section id="list{{title}}" class="right list {{#if active}} act {{/if}}">
+			   	<ul class="groceriesList">
+			    	{{#each groceries}}
+			    		{{> grocery_list_task}}
+			      	{{/each}}
+			   	</ul>
+			   	<form class="groceryForm">
+		  	    	<input type="text" id="grocery" placeholder="Type to add" />
+		  	    	<input type="hidden" id="_id" value="{{_id}}"/>
+		  	    	<input type="submit" value="Submit" class="btn btn-primary"/>
+		  	  	</form>
+			</section>
+		{{/each}}
+	</div>
+</template>

@@ -1,0 +1,13 @@
+<template name="galleryFull">
+	<section class="full fullWidget">
+		<header>
+			<h2>{{title}} <a href="/" class="backButton">x</a></h2>
+		</header>
+		<article class="wrapper gallery">
+			{{#each photos}}
+				<a class="grouped_elements photo fancybox" rel="1" href="{{url}}"><img src="{{url}}" alt=""/></a>
+			{{/each}}
+		</article>
+		{{> comments comments}}
+	</section>
+</template>

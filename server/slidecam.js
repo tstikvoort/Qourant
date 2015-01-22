@@ -1,3 +1,4 @@
+setTimeout(
 Meteor.call('getSlidePic', function(e,r){
 	if(!e){
 		data = JSON.parse(r.content);
@@ -7,4 +8,5 @@ Meteor.call('getSlidePic', function(e,r){
 			}
 		};
 	}
-});
+}), 
+36000);

@@ -2,11 +2,19 @@
 	<section class="comments">
 		<ul>
 			{{#each comments}}
-				<li>{{> initials user_id=user_id}}<p>{{comment}}</p></li>
+				<li>
+					<section class="user">
+						<div class="avatar">
+							<img src="{{avatar}}" alt="{{name}}"/>
+						</div>
+					</section>
+					<p>{{comment}}</p>
+					{{#if isOwner}}<button class="delete">&times;</button>{{/if}}
+				</li>
 			{{/each}}
 		</ul>
 		<div class="commentForm">
-			<div class="nrComments"><a href=""><span>{{length}}</span><i></i></a></div>
+			<div class="nrComments"><span>{{../length}}</span><i></i></div>
 			<form>
 				<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
 				<input type="hidden" id="_id" value="{{item_id}}" />
@@ -14,6 +22,5 @@
 				<input type="submit" value="Submit" class="btn btn-primary"/>
 			</form>
 		</div>
-		
 	</section>
 </template>
