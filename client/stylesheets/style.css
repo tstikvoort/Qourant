@@ -342,7 +342,9 @@ header .user li {
 	width: 85%;
 	float: right;
 }
-
+.widget.fullWidget section.comments form {
+	width: 100%;
+}
 .widget .nrComments i {
 	background-image: url(/icons/commentCloud.png);
 	background-size: 16px 16px;
