@@ -1,13 +1,15 @@
-<template name="knowyourcompany">
-	<section class="knowyourcompany">
-		{{#with knowyourcompany}}
-			<header>
-				<a href="/know-your-company/{{_id}}">
-					<h2>Know Your Company</h2>
-				</a>
-			</header>
-			<p class="question">Q: {{question}}</p>
-			{{> comments comments}}
-		{{/with}}
+<template name="knowYourCompany">
+	<section class="widget">
+		<section class="knowyourcompany">
+			{{#with knowYourCompany}}
+				<header>
+					<a href="/know-your-company/{{_id}}">
+						<h2>Know Your Company</h2>
+					</a>
+				</header>
+				<p class="question">Q: {{question}}</p>
+			{{/with}}
+			{{> comments allComments}}
+		</section>
 	</section>
 </template>

@@ -1,9 +1,11 @@
 Template.comments.helpers({
     isOwner: function() {
         var user = Meteor.user();
-        var comment = postComments.findOne(this._id);
-        if(comment.user_id == user._id) return true;
+        if(this.user_id == user._id) return true;
         return false;
+    },
+    length: function() {
+        return this.length;
     }
 });
 Template.comments.events({
@@ -15,7 +17,7 @@ Template.comments.events({
                 user_id: user._id,
                 post_id: $(e.target).find('[id="_id"]').val(),
                 name: user.profile.name,
-                avatar: user.services.google.picture,
+                avatar: user.profile.picture,
                 comment: $(e.target).find('[id="comment"]').val(),
                 type: $(e.target).find('[id="type"]').val(),
                 datetime: new Date()

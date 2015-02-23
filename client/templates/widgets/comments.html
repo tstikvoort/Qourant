@@ -1,7 +1,7 @@
 <template name="comments">
 	<section class="comments">
 		<ul>
-			{{#each comments}}
+			{{#each this}}
 				<li>
 					<section class="user">
 						<div class="avatar">
@@ -14,11 +14,11 @@
 			{{/each}}
 		</ul>
 		<div class="commentForm">
-			<div class="nrComments"><span>{{../length}}</span><i></i></div>
+			<div class="nrComments"><span>{{length}}</span><i></i></div>
 			<form>
 				<input name="comment" id="comment" type="text" value="" placeholder="Comment here"/>
-				<input type="hidden" id="_id" value="{{item_id}}" />
-				<input type="hidden" id="type" value="{{type}}" />
+				<input type="hidden" id="_id" value="{{../_id}}" />
+				<input type="hidden" id="type" value="{{../type}}" />
 				<input type="submit" value="Submit" class="btn btn-primary"/>
 			</form>
 		</div>

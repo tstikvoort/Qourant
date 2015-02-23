@@ -37,6 +37,9 @@ Meteor.publish("users", function () {
 Meteor.publish("calendar", function(){
     return calendar.find();
 });
+Meteor.publish("videos", function(){
+    return videos.find();
+});
 Meteor.publish("postComments", function(){
     return postComments.find();
 });

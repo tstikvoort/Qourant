@@ -15,5 +15,13 @@ Accounts.validateNewUser(function (user) {
     if(user.services.google.email.match(/dimitri.glimworm@gmail.com$/)) {
         return true;
     }
+    if(user.services.google.email.match(/tobias@wezz.nl$/)) {
+        return true;
+    }
     throw new Meteor.Error(403, "You must sign in using a @q42.nl account");
 });
+Accounts.onCreateUser(function(options, user) {
+    options.profile.picture = user.services.google.picture;
+    user.profile = options.profile;
+    return user;
+});  

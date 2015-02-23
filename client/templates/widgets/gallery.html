@@ -1,18 +1,20 @@
 <!-- Template for photogallery List -->
 <template name="photoGallery">
-	<section class="photoGallerie">
-		{{#with gallery}}
-			<header>
-				<a href="gallery/{{_id}}">
-					<h2>{{title}}</h2>
-				</a>
-			</header>
-			<article class="wrapper gallery">
-				{{#each photos}}
-					<a class="grouped_elements photo fancybox" rel="{{../_id}}" href="{{url}}"><img src="{{url}}" alt=""/></a>
-				{{/each}}
-			</article>
-			{{> comments comments}}
-		{{/with}}
+	<section class="widget">
+		<section class="photoGallerie">
+			{{#with gallery}}
+				<header>
+					<a href="gallery/{{_id}}">
+						<h2>{{title}}</h2>
+					</a>
+				</header>
+				<article class="wrapper gallery">
+					{{#each photos}}
+						<a class="grouped_elements photo fancybox" rel="{{../_id}}" href="{{url}}"><img src="{{url}}" alt=""/></a>
+					{{/each}}
+				</article>
+			{{/with}}
+			{{> comments allComments}}
+		</section>
 	</section>
 </template>

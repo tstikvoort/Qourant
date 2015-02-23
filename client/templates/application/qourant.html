@@ -3,71 +3,40 @@
   	<div class="">
   		<!-- Header containing Title + date -->
 		{{#if currentUser}}
-		<!-- Header Widgets -->
-		<section id="header_widgets">
-	 		<section class="widget header_widget" id="grocery_list">
-	 			{{> grocery_list}}
-	 		</section>	
-	 		<section class="widget header_widget" id="birthdays">
-	 			{{> birthdays}}
-	 		</section>	
-	 		<section class="widget header_widget" id="whos_in">
-	 			{{> whos_in}}
-	 		</section>	
-	 	</section>
+			<!-- Header Widgets -->
+			<section id="header_widgets">
+		 		<section class="widget header_widget" id="grocery_list">
+		 			{{> grocery_list}}
+		 		</section>	
+		 		<section class="widget header_widget" id="birthdays">
+		 			{{> birthdays}}
+		 		</section>	
+		 		<section class="widget header_widget" id="whos_in">
+		 			{{> whos_in}}
+		 		</section>	
+		 	</section>
 
-	 	<!-- Q-of-the-week -->
-	    <section class="widget" id="Q_of_the_week">
-	    	{{> Q_of_the_week}}
-		</section>
+		 	<!-- Q-of-the-week -->
+		    <section class="widget" id="Q_of_the_week">
+		    	{{> Q_of_the_week}}
+			</section>
 
-		<!-- Main widgets -->
-		<section id="column_wrapper">
-			<!-- Left Column -->
-			<section id="left_column">
-				<section class="widget" id="fun_task">
-					{{> fun_task}}
+			<!-- Main widgets -->
+			<section id="column_wrapper">
+				<section id="left_column">
+					{{#each leftWidgets}}
+						{{> UI.dynamic template=type}}
+					{{/each}}
 				</section>
-				<section class="widget">
-					{{> photoGallery photoGallery1}}
-				</section>
-				<section class="widget">
-					{{> knowyourcompany knowyourcompany1}}
-				</section>
-				<section class="widget" id="Q_of_the_week">
-		    		{{> slideCam}}
-				</section>
-				<section class="widget">
-					{{> video wootcamp2014}}
+				<section id="right_column">
+					{{#each rightWidgets}}
+						{{> UI.dynamic template=type}}
+					{{/each}}
 				</section>
 			</section>
-			<!-- Right Column -->
-			<section id="right_column">
-				<section class="widget" id="skill_research">
-					{{> skill_search}}
-				</section>
-				<section class="widget">
-					{{> calendar}}
-				</section>
-				<section class="widget">
-					{{> video qUitje2014}}
-				</section>
-				<section class="widget">
-					{{> photoGallery photoGallery2}}
-				</section>
-				<section class="widget">
-					{{> knowyourcompany knowyourcompany2}}
-				</section>
-				<section class="widget">
-					{{> video codeuur}}
-				</section>
-			</section>
-		</section>
-
 		{{else}}
 			{{> loginButtons}}
 			<a href="geenQ" id="getOut">Geen Q'er?</a>
 		{{/if}}
-
   </div>
 </template>
