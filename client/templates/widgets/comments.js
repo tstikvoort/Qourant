@@ -11,6 +11,7 @@ Template.comments.helpers({
 Template.comments.events({
     'submit form': function(e) {
         e.preventDefault();
+        console.log('test');
         if($(e.target).find('[id="comment"]').val() != '') {
             var user = Meteor.user();
             var comment = {

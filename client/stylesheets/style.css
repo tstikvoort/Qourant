@@ -439,6 +439,7 @@ header .user li {
 	background-image: url('/icons/checkmarkWhite.png');
 	color: white;
 	padding-left: 40px;
+	cursor: auto;
 }
 
 /* ------------------------------- */

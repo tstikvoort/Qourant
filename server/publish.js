@@ -22,17 +22,8 @@ Meteor.publish("searchResults", function() {
 Meteor.publish("whosIn", function() {
     return whosIn.find();
 });
-Meteor.publish("userData", function () {
-    return Meteor.users.find();
-});
 Meteor.publish("groceries", function(){
     return groceries.find();
-});
-Meteor.publish("users", function () {
-    return Meteor.users.find(
-        {_id: this.userId},
-        {fields: {'services': 1}}
-    );
 });
 Meteor.publish("calendar", function(){
     return calendar.find();
@@ -42,4 +33,7 @@ Meteor.publish("videos", function(){
 });
 Meteor.publish("postComments", function(){
     return postComments.find();
+});
+Meteor.publish("funTasks",function(){
+    return funTasks.find();
 });

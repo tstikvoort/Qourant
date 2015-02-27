@@ -19,22 +19,24 @@ var widgets = [
         type: 'calendar'
     },
     {
-        type: 'fun_task'
+        type: 'funTask'
     },
     {
         type: 'skill_search'
     }, 
     {
-        type: 'video',
-        _id: 'Q6Nqqc0Hna20RnzYM'
+         _id: 'Q6Nqqc0Hna20RnzYM',
+        type: 'video'
+       
     },
     {
-        type: 'video',
-        _id: 'SnFog1l7RmLZlONYY'
+        _id: 'SnFog1l7RmLZlONYY',
+        type: 'video'
+        
     },
     {
-        type: 'video',
-        _id: 'SeNaHAM64LmHYGvya'
+        _id: 'SeNaHAM64LmHYGvya',
+        type: 'video'
     }
 ];
 Meteor.subscribe("postComments");

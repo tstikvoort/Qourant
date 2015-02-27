@@ -1,6 +1,5 @@
 Template.knowYourCompany.helpers({
 	knowYourCompany: function() {
-        console.log(this._id);
         return knowYourCompany.findOne(this._id);
     },
     allComments: function(){

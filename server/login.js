@@ -21,7 +21,9 @@ Accounts.validateNewUser(function (user) {
     throw new Meteor.Error(403, "You must sign in using a @q42.nl account");
 });
 Accounts.onCreateUser(function(options, user) {
-    options.profile.picture = user.services.google.picture;
+    options.profile.picture     =   user.services.google.picture;
+    options.profile.given_name  =   user.services.google.given_name;
+    options.profile.family_name =   user.services.google.family_name;
     user.profile = options.profile;
     return user;
 });  
