@@ -1,0 +1,15 @@
+<template name="funTask">
+	<section class="widget" id="fun_task">
+		<section class="fun_task">
+			<header>
+				<h2>Fun Tasks</h2>
+			</header>
+			{{#with funTask}}
+			<article>
+				<p class="task">{{ currentUser.profile.given_name }}, {{task}}.</p>
+				<button class="{{#if done}} done {{/if}}">{{#if done}}Well done! {{else}} Done{{/if}}</button>
+			</article>
+			{{/with}}
+		</section>
+	</section>
+</template>
