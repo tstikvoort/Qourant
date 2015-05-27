@@ -40,7 +40,7 @@ Meteor.methods({
             }
             
         } else if (funTask.date.toDateString() != today.toDateString()) {
-            funTask.remove({user_id: user._id});
+            funTasks.remove({user_id: user._id});
             var targets = Meteor.users.find().fetch();
             var target  = targets[Math.floor(Math.random()*targets.length)];
             var tasks = [

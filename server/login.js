@@ -24,6 +24,7 @@ Accounts.onCreateUser(function(options, user) {
     options.profile.picture     =   user.services.google.picture;
     options.profile.given_name  =   user.services.google.given_name;
     options.profile.family_name =   user.services.google.family_name;
+    options.profile.skills      =   [];
     user.profile = options.profile;
     return user;
 });  
