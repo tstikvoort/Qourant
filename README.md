@@ -2,8 +2,10 @@
 ## HvA CMD - project 6
 
 ----
-Dit is een realtime platform speciaal ontworpen voor Q42. De hoofdvraag van dit project was: "Hoe kunnen wij er voor zorgen dat de werknemers van de verschillende filialen van Q42 elkaar goed leren en blijven kennen?" 
+Dit is een realtime platform speciaal ontworpen voor Q42. De hoofdvraag van dit project was: "Hoe kunnen wij er voor zorgen dat de werknemers van de verschillende filialen van Q42 elkaar goed leren en blijven kennen?"
+
 We hebben uiteindelijk de Qourant bedacht, een wekelijkse krant, een platform, met een reeks aan widgets die informatie geven over wat er zoal in en rondom Q42 gebeurt. Q42 heeft onlangs een filiaal geopend in San Francisco. We zien juist de kracht van dit platform in de brug die het slaat tussen San Francisco en Nederland. Daarom zal de voertaal op de Qourant ook Engels zijn. Je kunt de widgets in twee gedeeltes op delen: widgets die informatie geven en widgets die extra functionaliteiten toevoegen aan de Qourant.
+
 Dit betreft een prototype, het voornamelijke doel was om een indruk te geven van hoe het werkt en hoe het eruit ziet. Een aantal functionaliteiten zijn dus niet echt uitgewerkt. De volgorde en het aantal widgets wat getoond wordt, is nu met een vaste array gemaakt. In een eind product zou er een back-end bij zitten die zo'n array zou genereren. 
 
 ### De widgets
